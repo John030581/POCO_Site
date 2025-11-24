@@ -138,7 +138,7 @@ const Home = () => {
                                         _ngcontent-ng-c47258724
                                         className="btn btn-primary d-flex align-items-center font-16 ms-3 text-uppercase"
                                     >
-                                        Buy $PEPETO
+                                        Buy $POCO
                                     </div>
                                     
                                     {/* <div
@@ -517,7 +517,7 @@ const Home = () => {
                                                 {" "}
                                                 |
                                                 <span _ngcontent-ng-c1353104898 className="px-4">
-                                                    Pepeto releases its exchange
+                                                    POCO releases its exchange
                                                 </span>
                                             </h4>
                                             <h4
@@ -537,7 +537,7 @@ const Home = () => {
                                                 {" "}
                                                 |
                                                 <span _ngcontent-ng-c1353104898 className="px-4">
-                                                    Pepeto, takes the world of memecoins to the next level
+                                                    POCO, takes the world of memecoins to the next level
                                                 </span>
                                             </h4>
                                         </div>
@@ -545,13 +545,13 @@ const Home = () => {
                                 </marquee>
                             </div>
                         </app-sticky-banner>
-                        <div _ngcontent-ng-c474848370 className="container mt-lg-5 mt-4">
+                        <div _ngcontent-ng-c474848370 className="container mt-lg-5 mt-4 pr-32 pl-32">
                             <div _ngcontent-ng-c474848370 className="bannerSec row">
                                 <div _ngcontent-ng-c474848370 className="col-12 col-md-7 leftSec">
                                     <div _ngcontent-ng-c474848370 className="banner-content">
                                         <h1 _ngcontent-ng-c474848370 className="banner-title">
                                             <span _ngcontent-ng-c474848370 className="d-block">
-                                                PEPETO
+                                                POCO
                                             </span>
                                             <span _ngcontent-ng-c474848370 className="d-block">
                                                 the god of frogs
@@ -589,7 +589,7 @@ const Home = () => {
                                             src="/assets/images/svg-icons/banner-sun.svg"
                                             alt="bg-sun"
                                             loading="eager"
-                                            className="img-fluid bg-sun position-absolute"
+                                            className="img-fluid bg-sun position-absolute mt-5 pt-12"
                                         />
                                         <img
                                             _ngcontent-ng-c474848370
@@ -613,7 +613,7 @@ const Home = () => {
                                                 _ngcontent-ng-c474848370
                                                 className="font-24 text-capitalize fw-normal mb-3 font-family-secondary"
                                             >
-                                                Buy $PEPETO Tokens Now
+                                                Buy $POCO Tokens Now
                                             </p>
 
                                             <div
@@ -1627,14 +1627,13 @@ const Home = () => {
                                                     <img
                                                         _ngcontent-ng-c2966608895
                                                         alt="youtube_poster"
-                                                        className="thumbnail"
+                                                        className="                  thumbnail"
                                                         src="http://img.youtube.com/vi/9QH1ch87J3M/0.jpg"
                                                     />
                                                     <img
                                                         _ngcontent-ng-c2966608895
                                                         src="/assets/images/png/youtube-icon.png"
-                                                        alt="youtube_poster"
-                                                        className="youtube-icon"
+                                                        alt="youtube_poster"                 
                                                     />
                                                 </div>
                                             </div>
@@ -1754,7 +1753,7 @@ const Home = () => {
                                         className="section-title text-center text-lg-start"
                                     >
                                         {" "}
-                                        Value of $PEPETO Token{" "}
+                                        Value of $POCO Token{" "}
                                     </h2>
                                     <p
                                         _ngcontent-ng-c2871691664
@@ -1982,7 +1981,7 @@ const Home = () => {
                             _ngcontent-ng-c63405296
                             className="font-lg-50 font-40 text-center"
                         >
-                            PEPETO bridge
+                            POCO bridge
                         </h2>
                         <p
                             _ngcontent-ng-c63405296
