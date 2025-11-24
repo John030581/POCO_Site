@@ -1,0 +1,849 @@
+{
+    "111059316": {
+        "b": "\u003Csvg width=\"32\" height=\"26\" viewBox=\"0 0 32 26\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\u003Cpath d=\"M30.3086 1.79199H2.30859\" stroke=\"#ffffff\" stroke-width=\"2.94737\" stroke-linecap=\"square\"/>\n\u003Cpath d=\"M30.3086 12.8447H2.30859\" stroke=\"#ffffff\" stroke-width=\"2.94737\" stroke-linecap=\"square\"/>\n\u003Cpath d=\"M30.3086 23.8975H2.30859\" stroke=\"#ffffff\" stroke-width=\"2.94737\" stroke-linecap=\"square\"/>\n\u003C/svg>\n",
+        "h": {},
+        "s": 200,
+        "st": "OK",
+        "u": "./assets/images/svg-icons/burger-icon.svg",
+        "rt": "text"
+    },
+    "1175897171": {
+        "b": "\u003Csvg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\u003Crect x=\"4\" y=\"4\" width=\"16\" height=\"16\" rx=\"3.5\" stroke=\"#191700\" stroke-width=\"2\"/>\n\u003Cpath d=\"M9 15L15 9M15 9H9M15 9V15\" stroke=\"#191700\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\u003C/svg>\n",
+        "h": {},
+        "s": 200,
+        "st": "OK",
+        "u": "./assets/images/svg-icons/from.svg",
+        "rt": "text"
+    },
+    "2640406905": {
+        "b": {
+            "top_navigation": {
+                "nav_home": "Home",
+                "nav_howtobuy": "How To Buy",
+                "nav_about": "Who Is PEPETO?",
+                "nav_roadmap": "Roadmap",
+                "nav_faq": "FAQS",
+                "nav_staking": "Staking",
+                "nav_tokenomics": "Tokenomics",
+                "nav_bridge": "Bridge",
+                "nav_giveaway": "Giveaway",
+                "nav_media": "Media"
+            },
+            "footer_navigation": {
+                "terms": "Terms of Service",
+                "privacy": "Privacy Policy",
+                "copyright": "PEPETO © 2025. All rights reserved.",
+                "disclaimer_1": "The crypto market can be volatile. Be aware of tax obligations, as profits may be subject to capital gains or other taxes depending on your location.",
+                "disclaimer_2": "Regulations differ across regions, so it's essential to understand the rules that apply to you. Do thorough research and only invest what you can afford to lose."
+            },
+            "banner": {
+                "banner_text_1": "PEPETO",
+                "banner_text_2": "the god of frogs",
+                "banner_desc": "Congrats! You're early to the party! Buy and Stake now during Presale to max out your rewards before the price skyrockets!",
+                "info_text": "What did Pepe miss? Pepeto's about to drop a game-changing move",
+                "breaking": "BREAKING:",
+                "top_text0": "Pepeto releases its exchange ",
+                "top_text1": "The God of frogs is ready to reveal the truth",
+                "top_text2": "Pepeto, takes the world of memecoins to the next level",
+                "top_text3": "Pepeto releases its exchange",
+                "top_text4": "The God of frogs is ready to reveal the truth",
+                "top_text5": "Pepeto, takes the world of memecoins to the next level"
+            },
+            "widget": {
+                "bar_title": "UNTIL PRICE RISE",
+                "widget_title": "Buy $PEPETO Tokens Now",
+                "widget_desc": "Early buyers will have the biggest presale discount",
+                "days": "Days",
+                "hours": "Hours",
+                "minutes": "Minutes",
+                "seconds": "Seconds",
+                "your_claimable": "Your purchased {{tokenName}}",
+                "your_stakeable": "Your stakeable {{tokenName}}",
+                "usdt_raised": "USDT Raised:",
+                "refer_friends": "Refer your friends to participate in the presale",
+                "refer_and_earn": "Refer and Earn",
+                "buy_with": "Buy {{tokenName}} with",
+                "buy_with_usdt": "Buy {{tokenName}} with USDT",
+                "buy_with_option": "Buy {{tokenName}} with Card",
+                "buy_with_card": "BUY WITH CARD",
+                "card": "Card",
+                "not_enough_eth": "Not enough ETH? Top up now",
+                "your_staked": "Your staked",
+                "switch_to": "Buy with",
+                "stake_now": "Stake Now",
+                "powered_by": "Powered by",
+                "low_balance": "You don't have enough {{tokenName}} to pay for this transaction!",
+                "gas_fees": "{{gasFees}} {{modeName}} is reserved for gas. The actual amount used will depend on the network.",
+                "low_gas_fees": "You do not have enough {{modeName}} to pay for this transaction.",
+                "low_usdt": "You do not have enough USDT to pay for this transaction.",
+                "swap_error": "Make sure you have {{gasFees}} {{modeName}} for gas and {{tokenName}} for the token exchange.",
+                "authorise": "Authorize",
+                "pay_with": "Pay with {{tokenName}}",
+                "amount_in": "Receive {{cryptoName}}",
+                "buy_now": "Buy $PEPETO",
+                "max": "Max",
+                "max_token_exceed": "Amount exceeds max tokens ({{maxTokensToBuy}}) to buy!",
+                "max_token_title": "Max tokens!",
+                "your_purchased": "Your Unclaimed",
+                "transaction_in_progress": "your transaction is in progress!",
+                "transction_info": "{{baseToken}} {{cryptoName}} tokens will be available for you to claim once the presale ends.",
+                "waiting_approve": "In order to buy {{cryptoName}} with USDT, you first need to authorize us to access the USDT in your wallet.",
+                "transaction_success": "Your purchase was successful!",
+                "view_transaction": "View Transaction",
+                "start_again": "Start Again",
+                "transaction_failed": "Your purchase has failed!",
+                "view_transaction_info": "Please click on the View Transaction button for more details.",
+                "transaction_rejected": "Your purchase was rejected!",
+                "min_crypto": "Please purchase at least {{minAmount}} {{cryptoName}}.",
+                "waiting_confirm": "In order to buy {{cryptoName}} with {{tokenName}}, please confirm the transaction in your wallet. You may need to check the wallet app if you're on mobile.",
+                "join_community": "In the meantime, join our community",
+                "presale_over": "THE $PEPETO PRESALE IS NOW OVER",
+                "presale_over_desc": "Claim and launch date will be declaired soon.",
+                "claim_live": "$PEPETO Claim and Token now LIVE!",
+                "claim_desc": "You can now claim your $PEPETO tokens. Plus, stake your tokens to earn rewards! Add 0xABCDreplaceme to your wallet to see your $PEPETO.",
+                "claim_page_desc": "$PEPETO Claim is now live! Stake your claimed tokens below to earn rewards!",
+                "just_claim": "Just want to claim your $PEPETO? Click here",
+                "claim_token": "Claim $PEPETO",
+                "buy_dextool": "BUY ON DEX SCREENER",
+                "claim_title": "Check your wallet app",
+                "claim_help": "In order to confirm your transaction, please check your wallet. Sometimes the wallet may not alert you when a transaction is submitted, however you should now see a transaction which you can sign in your wallet of choice. Please ensure your wallet has enough ETH to cover gas fees.",
+                "your_claimable_token": "Your claimable {{tokenName}}",
+                "user_bal": "Your Balance",
+                "stake_token": "Stake Tokens",
+                "stake_tokens_now": "STAKE YOUR TOKENS NOW",
+                "enterAmount": "Enter amount of tokens to stake",
+                "stake_amount": "Stake Amount",
+                "no_wallet_click_here": "Don't have a wallet?",
+                "not_enough_bnb": "Not enough BNB? Top up now"
+            },
+            "wert": {
+                "title": "Wert Widget",
+                "desc": "Please wait while we are initializing the Wert widget.",
+                "disclaimer": "By continuing, you're purchasing {{token}} tokens. Your tokens won't be immediately deposited to your wallet. You'll be able to claim them on the claim date that will be announced at a later date. After you claim them, they will be deposited to your wallet.",
+                "meme_token": "$PEPETO is a meme token, and is not an ETF in any way, shape or form.",
+                "continue": "Continue"
+            },
+            "staking": {
+                "title": "Welcome to $PEPETO Staking",
+                "desc": "The distribution of $PEPETO token rewards will occur at a rate of 32015981.73 $PEPETO tokens per ETH block. These rewards will be disbursed over 2 years and will be claimable once claim goes live.",
+                "card_1_title": "Staked Balance",
+                "card_2_title": "% of Pool",
+                "card_3_para_1": "Rewards rate is dynamic",
+                "card_3_para_2": "Monthly = Rewards % / 12",
+                "card_3_para_3": "Daily = Rewards % / 365",
+                "card_3_title": "Estimated Rewards",
+                "card_4_title": "Current Rewards",
+                "card_5_title": "Total Rewards",
+                "card_block": "Per ETH Block",
+                "card_coin": "$Pepeto",
+                "stake_pa": "p/a",
+                "rewards_btn": "Claim Rewards",
+                "rewards": "Rewards",
+                "buy_stake": "Buy And Stake",
+                "claim_stake": "Claim And Stake",
+                "your_stakeable": "Your stakeable",
+                "total_staked": "Total Staked",
+                "withdraw_text": "All staked tokens can be withdrawn 7 days after token claiming goes live, which will happen after the presale has concluded.",
+                "withdraw": "Withdraw",
+                "pool_share": "$PEPETO staking rewards are distributed at a rate of 32015981.73 $PEPETO per ETH block. Your percentage of the pool will determine what percentage of the 32015981.73 $PEPETO tokens you receive.",
+                "staking_powered_by": "Staking powered by",
+                "dashboard": "Dashboard",
+                "buy_and_stake": "Buy & Stake Now",
+                "sold_out_stage": "Presale over for this stage",
+                "whitelist_now": "The current presale round is open to whitelisted wallets only",
+                "sold_out_desc": "Due to unprecedented demand, Phase 1 is now over! Phase 2 is coming soon, so keep your eyes on the countdown and ready your wallets to pickup $PEPETO",
+                "total_rewards": "Total Supply",
+                "stake_claim_success": "All staked tokens can be withdrawn 7 days after token claiming goes live, which will happen after the presale has concluded.",
+                "stake_transaction_failed": "YOUR STAKE HAS FAILED.",
+                "stake_transaction_in_progress": "Your transaction is in progress!",
+                "stake_transaction_rejected": "Your stake was rejected.",
+                "stake_transaction_success": "YOUR STAKE WAS SUCCESSFUL!",
+                "stake_transction_info": "{{stakeAmount}} $PEPETO tokens will be staked once the transaction completes",
+                "stake_view_transaction_info": "Please click on the View Transaction button for more details.",
+                "stake_waiting_approve": "In order to stake $PEPETO, you first need to authorize us to access the $PEPETO in your wallet",
+                "waiting_confirm_stake": "In order to buy and stake your $PEPETO tokens, please confirm the transaction in your wallet. You may need to check the wallet app if you're on mobile.",
+                "waiting_confirm_stake_2": "All staked tokens can be withdrawn 7 days after token claiming goes live, which will happen after the presale has concluded.",
+                "stake_waiting_confirm": "In order to stake $PEPETO, please confirm the transaction in your wallet. You may need to check the wallet app if you're on mobile.",
+                "claim_stake_tokens_now": "Stake your unclaimed tokens for",
+                "stake_popup_info": "Unclaimed $PEPETO that was bought using ETH or ERC-20 USDT can be staked now. Please note that all early staked tokens can be withdrawn 7 days after token claiming goes live, which will happen after the presale has concluded.",
+                "transction_info_stake": "{{baseToken}} tokens will be purchased and staked once the transaction is confirmed.",
+                "transction_info_stake_success": "{{baseToken}} tokens have now been staked! Check the dashboard for details.",
+                "claim_stake_title": "Stake Your $PEPETO now",
+                "claim_stale_help": "Confirm the transaction in your wallet to stake your $PEPETO now. This will automatically stake all of your $PEPETO tokens. Tokens will be locked for 7 days after the claiming process goes live.",
+                "buy_stake_for": "Buy and Stake for",
+                "withdraw_title": "Withdraw Staked Tokens",
+                "claim_success": "Your tokens have been claimed successfully.",
+                "extend_stake": "Extend Stake",
+                "bonus_option": "Bonus Lock Options",
+                "option_1": "7 Days - 1x Rewards",
+                "option_2": "30 Days - 1.5x Rewards",
+                "option_3": "60 Days - 2x Rewards",
+                "option_4": "90 Days - 3x Rewards",
+                "staking_reward": "staking rewards"
+            },
+            "popup": {
+                "pick_wallet": "Pick your wallet",
+                "metamask_connect": "Metamask",
+                "wallet_connect": "Wallet Connect",
+                "bw_connect": "Connect with Best Wallet",
+                "coinbase_connect": "Coinbase Wallet",
+                "bitget_connect": "Bitget Wallet",
+                "exploring_web": "Start Exploring Web3",
+                "exploring_des": "Your wallet is the gateway to all things Ethereum, the magical technology that makes it possible to explore Web3.",
+                "choose_first_wallet": "Choose Your First Wallet",
+                "get_wallet": "Get a Wallet",
+                "no_wallet": "I don’t have a wallet",
+                "download_best_wallet": "Download Best Wallet on Mobile",
+                "claim_not_live": "Claim is not live yet",
+                "ref_link": "Referral Link",
+                "ref_text": "Copy your referral link below and send it to your friends. For every purchase made using this link, you’ll receive 5% of the purchase amount.",
+                "change_chain": "Switch to",
+                "change_chain_info": "Are you sure you want to change?",
+                "change_swap_text": "If you purchase on {{mode}} during the presale, you won't be eligible for the {{apy}}% annual returns from staking. We recommend buying on Ethereum if you want to stake.",
+                "buy_with_mode": "Buy with {{mode}}",
+                "are_you_sure": "Are you sure?",
+                "wrong_chain": "Wrong chain id! Please Connect to {{chainName}}",
+                "change_network": "Change Network",
+                "switchNetwork": "Switching Chain Failed. Please try to switch to chain {{chain_name}} manually.",
+                "your_purchased_popup_info": "Your total purchased tokens are all tokens purchased using the connected wallet. This includes all staked and unstaked tokens.",
+                "already_have": "Already got the Best Wallet app?",
+                "iOS": "iOS",
+                "android": "Android",
+                "need_wallet": "Need a wallet? Try Best Wallet!",
+                "download_bw": "Get Best Wallet",
+                "install_app": "Scan the QR code below on your mobile device in order to install the Best Wallet app.",
+                "install_app_mob": "Click the button below on your mobile device to install the Best Wallet app.",
+                "hit_btn_connect": "Hit the button below and use the QR code scanner in the Best Wallet app in order to connect."
+            },
+            "misc": {
+                "ok": "OK",
+                "done": "Done",
+                "connect_wallet": "Connect Wallet",
+                "connect_bw_wallet": "Connect Best Wallet",
+                "buy_now": "Buy Now",
+                "cancel": "Cancel",
+                "close": "Close",
+                "confirm": "Confirm",
+                "whitepaper": "Whitepaper",
+                "audit": "Audit",
+                "successCopy": "Copied successfully!",
+                "coming_soon": "Coming Soon",
+                "best_wallet": "Best Wallet",
+                "meta_title": "PEPETO Token– The Ultimate Memecoin Revolution | Presale for Multi-Memecoin Exchange",
+                "meta_data": "Pepeto is back with the true power of technology and optimization, creating a revolutionary exchange that adopts all memecoins. Join the presale to be part of the memecoin evolution Pepe could never achieve!"
+            },
+            "faq": {
+                "title_2": "FAQ",
+                "mob_head": "FAQ",
+                "faq_1": "Who is the God of frog?",
+                "faq_cont_1": "Pepeto is the God of Frogs, embodying wisdom and power. His value comes from mastering \"Technology\" and \"Optimization,\" the key components Pepe missed. While Pepe stole four documents, he overlooked these crucial pieces, making him incomplete.\n\nPepeto's bridge technology connects blockchains, ensuring secure and transparent transfers. He symbolizes innovation, fairness, and the future of decentralized systems, bringing what Pepe couldn’t: the complete solution.",
+                "faq_2": "When can I claim my Tokens?",
+                "faq_cont_2": "The claiming process uses secure Web3Toolkit technology, allowing you to claim tokens after the presale ends. Simply reconnect your wallet, such as MetaMask, and click \"claim.\" Additionally, Web3Payments enables staking of your tokens once they’ve been claimed.",
+                "faq_3": "What is Pepetoswap? Why is it better?",
+                "faq_cont_3": "Pepeto Exchange is designed with several standout features that make it superior:",
+                "faq_4": "When will Pepeto be released?",
+                "faq_cont_4": "Pepeto exchange and ecosystem will be released once the presale has ended! AKA the day of judgment.",
+                "faq_cont_3_1": "Zero Fees",
+                "faq_cont_3_2": "Cross-Chain Bridge: Seamless interoperability between multiple blockchains ensures easy and flexible token transfers.",
+                "faq_cont_3_3": "Honest and Corruption-Free: As the God of Frogs, Pepeto guarantees a fair and transparent platform. Only deserving tokens are listed, ensuring no favoritism or corruption in the process.",
+                "faq_cont_3_4": "Security and Trust",
+                "faq_cont_3_5": "Supportive Environment: Pepeto offers assistance for new projects, fostering growth and success for all worthy participants.",
+                "faq_cont_3_6": "This combination of fairness, innovation, and security makes Pepeto Exchange stand out."
+            },
+            "bw_modal": {
+                "purchase_success": "Your purchase has been successful!",
+                "desktop_info_1": "Your tokens will available to claim once the token goes live.",
+                "desktop_info_2": "You've earned $BEST Airdrop points!",
+                "desktop_info_3": "Congrats, this transaction has earned you a LOT of $BEST Airdrop points, follow the steps below to claim them for FREE!",
+                "block_1_title": "Download the Best Wallet App",
+                "block_1_desc": "Scan the QR code with your phone camera",
+                "block_2_title": "Import this wallet into Best Wallet",
+                "block_2_desc": "Make sure it’s the wallet ending {{walletAddress}}",
+                "block_3_title": "Sit tight your rewards are coming",
+                "block_3_desc": "Enjoy your Best Airdrop rewards",
+                "mobile_info": "Your tokens will be available to claim once the token goes live. Import this wallet ({{walletAddress}}) into your Best Wallet app for massive points towards the $BEST Airdrop!",
+                "download_bw": "Download Best Wallet",
+                "already_have": "I already have Best Wallet"
+            },
+            "about": {
+                "head": "Who is the god of frogs",
+                "para1": "Pepeto returns with true power—Technology and Optimization. He holds the missing pieces Pepe could never understand. Beyond strength, Pepeto brings wisdom and unity, creating an exchange that adopts all memecoins, giving them real value and a place to thrive. This is the revolution Pepe could never achieve.",
+                "para2": "Read the whitepaper to know the full story"
+            },
+            "token": {
+                "title": "Value of $PEPETO Token",
+                "desc": "Under the watchful guidance of Pepeto, the god of frogs, the $PEPETO token stands as a symbol of trust and strength. Fully audited, with its smart contract code openly disclosed, it ensures complete transparency and security for all users. It’s the foundation of Pepeto’s vision of wisdom, safety, and unity for the crypto community.",
+                "audit": "Trust and Safety Audits",
+                "exchange": "Exchange",
+                "contract": "Contract",
+                "card1_title": "Power",
+                "card1_subtitle": "Harness community strength",
+                "card1_desc": "Power drives Pepeto forward through collective participation. As an investor, you're part of a growing force that builds impact together",
+                "card2_title": "Energy",
+                "card2_subtitle": "Fuel for continuous Growth",
+                "card2_desc": "Energy keeps the ecosystem alive and always moving forward. Investors benefit from a dynamic project that's always in action, driving new opportunities",
+                "card2_button": "Check roadmap for further updates",
+                "card3_title": "Precision",
+                "card3_subtitle": "Every move counts",
+                "card3_desc": "Precision means strategic, calculated decisions to optimize benefits and reduce risks. Every step is take to provide value to investors",
+                "card3_button": "All will be shared & discussed through Pepeto's social",
+                "card4_title": "Efficiency",
+                "card4_subtitle": "Maximize Gains, Minimize waste",
+                "card4_desc": "Efficiency focuses resources to get maximum returns. Investors can trust in a system designed to deliever high-value outcomes at low cost, with a sophisticated model that rewards early investors.",
+                "card5_title": "Technology",
+                "card5_subtitle": "Real innovation for true value",
+                "card5_desc": "Technology is the backbone of $PEPETO, bringing scalability and powerful exchange for investors. Unlike pepe, which lacks real technological strength, Pepeto has built a solid foundation to support long-term value.",
+                "card6_title": "Optimisation",
+                "card6_subtitle": "Future proof growth",
+                "card6_desc": "Optimization ensures peak perfomence, maximizing returns and preventing price dumps. Unlike Pepe, Pepeto, the God of frogs, is designed for stability and sustainable community growth, safeguarding investor confidence.",
+                "giveaway": "Giveaway"
+            },
+            "tokenomics": {
+                "presale": "Presale: 30%",
+                "presale_para": "Presale: 30% of the total supply will be allocated to the presale phase, ensuring enough liquidity and participation to jumpstart the project.",
+                "staking": "Staking: 30%",
+                "staking_para": "Staking: 30% of the total supply will be reserved for staking rewards, incentivizing long-term holders and fostering a stable ecosystem.",
+                "marketing": "Marketing: 20%",
+                "marketing_para": "Marketing: 20% will be dedicated to marketing efforts, including partnerships with influencers, social media promotions, and broader campaigns to drive mass adoption.",
+                "proj": "Project Development: 7.5%",
+                "proj_para": "Project Development: 7.5% will be allocated for ongoing project development, ensuring that Pepeto continues to evolve and improve post-launch.",
+                "liq": "Liquidity: 12.5%",
+                "liq_para": "Liquidity: 12.5% will be reserved to maintain healthy liquidity across exchanges, ensuring smooth trading and stability."
+            },
+            "roadmap": {
+                "title": "ROADMAP",
+                "card1_title": "Q4 2025:",
+                "card1_point1": "Token Contract Creation",
+                "card1_point2": "Establishment of Social Media Channels",
+                "card1_point3": "First Exchange Listing",
+                "card2_title": "Q1 2026:",
+                "card2_point1": "Audit and Public Disclosure of Smart Contract",
+                "card2_point2": "AMA Sessions on Twitter",
+                "card2_point3": "Second and Third Exchange Listing",
+                "card3_title": "Q2 2026:",
+                "card3_point1": "Bridge and Exchange Test Launch",
+                "card3_point2": "Fourth and Fifth Exchange Listing",
+                "card3_point3": "Extensive Marketing Campaigns",
+                "card4_title": "Q3 2026:",
+                "card4_point1": "Final AMA Sessions",
+                "card4_point2": "Community Staking Platform Release",
+                "card4_point3": "Ongoing Marketing and Mass Adoption Initiatives",
+                "card1_subtitle": "Website Launch: The official Pepeto",
+                "card2_subtitle": "Pepeto's Call to Action",
+                "card3_subtitle": "Pepeto's Evolution",
+                "card4_subtitle": "Pepeto's Ascent",
+                "card1_point4": "Marketing campaigns",
+                "card2_point4": "Community Building Campaigns",
+                "card3_point4": "Pepeto Exchange Platform Launch"
+            },
+            "bridge": {
+                "title": "PEPETO bridge",
+                "desc": "Pepeto’s bridge isn’t just a tool; it embodies his wisdom and unifying power, connecting different blockchain worlds. As part of the Technology he mastered, the bridge allows assets to move seamlessly using a lock and mint mechanism—locking tokens on one chain while minting equivalents on another.",
+                "desc_1": "Unlike Pepe, who overlooked this vital aspect, Pepeto ensures interoperability with decentralized security and no central authority, linking fragmented ecosystems in a way Pepe could never achieve.",
+                "title_1": "Are you a token owner?",
+                "title_2": "You believed in the God of frogs!",
+                "benefits": "Pepeto Exchange offers benefits:",
+                "benefits_1": "Zero Fees",
+                "benefits_2": "Top Security",
+                "benefits_3": "Cross-Chain Bridge",
+                "benefits_4": "Legitimacy",
+                "benefits_1_para": "No listing costs, boosting liquidity.",
+                "benefits_2_para": "Enhanced asset protection.",
+                "benefits_3_para": "Smooth blockchain integration.",
+                "benefits_4_para": "Scam-prone tokens are rejected, ensuring trust.",
+                "title_3": "No corruption",
+                "desc_2": "If your project merits a listing, it will be granted with FULL integrity. Should any support be needed, the God of Frogs will guide you.",
+                "apply_now": "Apply Now"
+            },
+            "howTobuy": {
+                "title": "How to buy $PEPETO",
+                "title_1": "1. Create your Metamask wallet",
+                "title_2": "2. Load Wallet With Crypto",
+                "title_3": "3. Buy and Stake $PEPETO",
+                "desc_1": "If you already have a compatible wallet–go to step 2. If not, we suggest Metamask for desktop. On mobile, we recommend Best Wallet: Simply download the app to get started!",
+                "desc_2": "Paying by card? Go to step 3. If paying by crypto, load your favourite crypto onto your wallet. ETH, USDT, and BNB are accepted.",
+                "desc_3": "Want more Gains? Connect your wallet to the website. Choose a payment method. Choose the amount of $PEPETO you want to buy–then Buy or Buy and Stake for max gains."
+            },
+            "mediaPage": {
+                "title": "media"
+            },
+            "feature": {
+                "title": "Featured In"
+            },
+            "giveaway": {
+                "title": "Pepeto’s $700K Giveaway",
+                "info1": "To celebrate the rise of Pepeto and the official launch of the \u003Cstrong> God of Frogs \u003C/strong> Campaign, we’re rewarding our most loyal believers.",
+                "info2": "\u003Cstrong>7 lucky winners\u003C/strong> will share \u003Cstrong>$700,000 worth of $PEPETO tokens\u003C/strong> — this is your chance to become part of the next legendary meme revolution.",
+                "li1_title": "How to Participate",
+                "li1_info1": "\u003Cstrong>Join the Pepeto Presale:\u003C/strong> \u003Cspan class='d-block'>Contribute a minimum of $100 via  \u003Ca class='giveaway-link small' target='_blank' href='https://pepeto.io'> Pepeto.io\u003C/a>.\u003C/span>",
+                "table_title": "Giveaway Rewards",
+                "th_1": "Rank",
+                "th_2": "Prize",
+                "th_3": "Winners",
+                "td_1": "$300,000 worth of \u003Cstrong>$PEPETO\u003C/strong>",
+                "td_2": "1 Winner",
+                "td_3": "$200,000 worth of \u003Cstrong>$PEPETO\u003C/strong>",
+                "td_4": "1 Winner",
+                "td_5": "$100,000 worth of \u003Cstrong>$PEPETO\u003C/strong>",
+                "td_6": "1 Winner",
+                "td_7": "$25,000 worth of \u003Cstrong>$PEPETO\u003C/strong> each",
+                "td_8": "4 Winners",
+                "td_9": "🏆 Community Prizes",
+                "td_10": "🥉 3rd",
+                "td_11": "🥈 2nd",
+                "td_12": "🥇 1st",
+                "total_prize": "\u003Cstrong>Total Prize Pool:\u003C/strong> $700,000 in $PEPETO tokens",
+                "total_winner": "\u003Cstrong>Total Winners:\u003C/strong> 7",
+                "li2_title": "Eligibility Requirements:",
+                "li2_info1": "Minimum $100 presale contribution via  \u003Ca class='giveaway-link small' target='_blank' href='https://pepeto.io'>Pepeto.io\u003C/a>",
+                "li2_info2": "Complete all required tasks on the official giveaway portal",
+                "li2_info3": "Provide a valid wallet address and contact information",
+                "li3_title": "Stay Safe:",
+                "li3_info1": "Pepeto will never DM you for private information",
+                "li3_info2": "Never share your seed phrase or private keys",
+                "li3_info3": "Always verify official links via  \u003Ca class='giveaway-link small' target='_blank' href='https://pepeto.io'>Pepeto.io \u003C/a>",
+                "join_giveaway": "ENTER THE GIVEAWAY NOW 🎉",
+                "li1_info3": " \u003Cstrong> Earn Bonus Entries:\u003C/strong> \u003Cspan class='d-block'>The more actions you complete, the higher your odds of winning!\u003C/span>",
+                "li1_info2": " \u003Cstrong> Complete Giveaway Tasks: \u003C/strong> \u003Cspan class='d-block'>Follow, repost, tag friends, and join Pepeto’s official communities.\u003C/span>",
+                "cookie_error": "If you are facing cookies error click here to open competition in a new tab.",
+                "safety": {
+                    "title": "🚨 Stay Safe:",
+                    "tip1": "We will never DM you for private info.",
+                    "tip2": "Never share your seed phrase or private key."
+                }
+            }
+        },
+        "h": {},
+        "s": 200,
+        "st": "OK",
+        "u": "./assets/i18n/en.json",
+        "rt": "json"
+    },
+    "3467213596": {
+        "b": "\u003Csvg width=\"50\" height=\"50\" viewBox=\"0 0 50 50\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\u003Cpath d=\"M25.1435 49.5432C38.7831 49.5432 49.8401 38.4529 49.8401 24.7716C49.8401 11.0902 38.7831 0 25.1435 0C11.5039 0 0.446777 11.0902 0.446777 24.7716C0.446777 38.4529 11.5039 49.5432 25.1435 49.5432Z\" fill=\"#4793FF\"/>\n\u003Cpath d=\"M25.1436 0C38.7613 0 49.8402 11.1125 49.8402 24.7716C49.8402 38.4306 38.7613 49.5432 25.1436 49.5432V0Z\" fill=\"#5E69E2\"/>\n\u003Cpath d=\"M25.1432 43.3244C35.3586 43.3244 43.6399 35.0184 43.6399 24.7717C43.6399 14.5249 35.3586 6.21899 25.1432 6.21899C14.9277 6.21899 6.64648 14.5249 6.64648 24.7717C6.64648 35.0184 14.9277 43.3244 25.1432 43.3244Z\" fill=\"#2EBEEF\"/>\n\u003Cpath d=\"M25.1436 6.21899C35.3427 6.21899 43.6403 14.541 43.6403 24.7717C43.6403 35.0023 35.3427 43.3244 25.1436 43.3244V6.21899Z\" fill=\"#4793FF\"/>\n\u003Cpath d=\"M23.9395 12.3066L16.1896 23.9666C15.8655 24.4533 15.8655 25.0887 16.1896 25.5767L23.9395 37.2367C24.5122 38.0987 25.7747 38.0987 26.3475 37.2367L34.0973 25.5767C34.4215 25.0887 34.4215 24.4533 34.0973 23.9666L26.3475 12.3066C25.7747 11.4445 24.5123 11.4445 23.9395 12.3066Z\" fill=\"#76E5F6\"/>\n\u003Cpath d=\"M25.1436 26.6468V37.8832C25.6024 37.8832 26.0612 37.6677 26.3476 37.2367L34.0975 25.5767C34.2481 25.35 34.3279 25.0912 34.3384 24.8311L25.4273 26.6183C25.3337 26.6369 25.2386 26.6468 25.1436 26.6468Z\" fill=\"#2EBEEF\"/>\n\u003Cpath d=\"M25.143 11.66C24.6842 11.66 24.2254 11.8756 23.939 12.3066L16.1891 23.9666C16.0158 24.2279 15.9361 24.5301 15.9482 24.8311L24.8592 26.6183C24.9529 26.6369 25.048 26.6468 25.143 26.6468V11.66Z\" fill=\"#C2F4FB\"/>\n\u003C/svg>\n",
+        "h": {},
+        "s": 200,
+        "st": "OK",
+        "u": "./assets/images/svg-icons/ETH.svg",
+        "rt": "text"
+    },
+    "3731726252": {
+        "b": "\u003Csvg width=\"8\" height=\"14\" viewBox=\"0 0 8 14\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n\u003Cpath d=\"M7 6.00006L4 9.00006L0.999999 6.00006\" stroke=\"white\" stroke-width=\"2\" stroke-miterlimit=\"3.8637\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n\u003C/svg>\n",
+        "h": {},
+        "s": 200,
+        "st": "OK",
+        "u": "./assets/images/svg-icons/arrow.down-white.svg",
+        "rt": "text"
+    },
+    "__nghData__": [
+        {},
+        {
+            "t": {
+                "14": "t1",
+                "16": "t2",
+                "17": "t3",
+                "18": "t4",
+                "24": "t5",
+                "33": "t6"
+            },
+            "c": {
+                "14": [
+                    {
+                        "i": "t1",
+                        "r": 1,
+                        "x": 5
+                    }
+                ],
+                "16": [
+                    {
+                        "i": "t2",
+                        "r": 1,
+                        "x": 4
+                    }
+                ],
+                "17": [
+                    {
+                        "i": "t3",
+                        "r": 1
+                    }
+                ],
+                "18": [],
+                "19": [],
+                "24": [],
+                "33": []
+            }
+        },
+        {
+            "t": {
+                "1": "t16",
+                "2": "t17",
+                "3": "t18",
+                "4": "t25",
+                "5": "t26",
+                "6": "t27",
+                "7": "t28",
+                "8": "t29",
+                "9": "t30"
+            },
+            "c": {
+                "1": [],
+                "2": [],
+                "3": [
+                    {
+                        "i": "t18",
+                        "r": 1,
+                        "t": {
+                            "25": "t19",
+                            "26": "t20",
+                            "27": "t21",
+                            "28": "t22",
+                            "29": "t23",
+                            "30": "t24"
+                        },
+                        "c": {
+                            "25": [],
+                            "26": [],
+                            "27": [],
+                            "28": [],
+                            "29": [],
+                            "30": []
+                        }
+                    }
+                ],
+                "4": [],
+                "5": [],
+                "6": [],
+                "7": [],
+                "8": [],
+                "9": []
+            }
+        },
+        {
+            "t": {
+                "28": "t7",
+                "29": "t8",
+                "30": "t9",
+                "31": "t10",
+                "40": "t11",
+                "55": "t12",
+                "57": "t13",
+                "58": "t14",
+                "59": "t15",
+                "60": "t31",
+                "63": "t33",
+                "64": "t34",
+                "65": "t35"
+            },
+            "c": {
+                "28": [
+                    {
+                        "i": "t7",
+                        "r": 1
+                    }
+                ],
+                "29": [],
+                "30": [],
+                "31": [
+                    {
+                        "i": "t10",
+                        "r": 1
+                    }
+                ],
+                "40": [
+                    {
+                        "i": "t11",
+                        "r": 1
+                    }
+                ],
+                "55": [],
+                "57": [
+                    {
+                        "i": "t13",
+                        "r": 1
+                    }
+                ],
+                "58": [
+                    {
+                        "i": "t14",
+                        "r": 1
+                    }
+                ],
+                "59": [
+                    {
+                        "i": "t15",
+                        "r": 1
+                    }
+                ],
+                "60": [
+                    {
+                        "i": "t31",
+                        "r": 1,
+                        "t": {
+                            "5": "t32"
+                        },
+                        "c": {
+                            "5": [
+                                {
+                                    "i": "t32",
+                                    "r": 1
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "63": [],
+                "64": [],
+                "65": [
+                    {
+                        "i": "t35",
+                        "r": 1
+                    }
+                ]
+            }
+        },
+        {
+            "t": {
+                "9": "t36",
+                "10": "t37",
+                "11": "t38",
+                "12": "t39",
+                "14": "t40"
+            },
+            "c": {
+                "9": [
+                    {
+                        "i": "t36",
+                        "r": 1,
+                        "x": 6
+                    }
+                ],
+                "10": [
+                    {
+                        "i": "t37",
+                        "r": 1,
+                        "x": 6
+                    }
+                ],
+                "11": [
+                    {
+                        "i": "t38",
+                        "r": 1,
+                        "x": 6
+                    }
+                ],
+                "12": [
+                    {
+                        "i": "t39",
+                        "r": 1,
+                        "x": 6
+                    }
+                ],
+                "14": []
+            }
+        },
+        {
+            "t": {
+                "9": "t41"
+            },
+            "c": {
+                "9": [
+                    {
+                        "i": "t41",
+                        "r": 1,
+                        "x": 6
+                    }
+                ]
+            }
+        },
+        {
+            "t": {
+                "10": "t42",
+                "37": "t43"
+            },
+            "c": {
+                "10": [],
+                "37": []
+            }
+        },
+        {
+            "t": {
+                "8": "t44",
+                "11": "t45",
+                "12": "t46"
+            },
+            "c": {
+                "8": [
+                    {
+                        "i": "t44",
+                        "r": 1,
+                        "x": 3
+                    }
+                ],
+                "11": [
+                    {
+                        "i": "t45",
+                        "r": 1,
+                        "x": 2
+                    }
+                ],
+                "12": []
+            }
+        },
+        {
+            "t": {
+                "8": "t47",
+                "10": "t48"
+            },
+            "c": {
+                "8": [
+                    {
+                        "i": "t47",
+                        "r": 1,
+                        "x": 3
+                    }
+                ],
+                "10": []
+            }
+        },
+        {
+            "t": {
+                "7": "t49"
+            },
+            "c": {
+                "7": []
+            }
+        },
+        {
+            "t": {
+                "4": "t51"
+            },
+            "c": {
+                "4": []
+            }
+        },
+        {
+            "n": {
+                "16": "15f"
+            },
+            "t": {
+                "16": "t50"
+            },
+            "c": {
+                "16": [
+                    {
+                        "i": "t50",
+                        "r": 1,
+                        "n": {
+                            "1": "0f5n",
+                            "6": "0f2nf2"
+                        },
+                        "t": {
+                            "11": "t52",
+                            "12": "t53"
+                        },
+                        "c": {
+                            "11": [],
+                            "12": []
+                        },
+                        "x": 2
+                    },
+                    {
+                        "i": "t50",
+                        "r": 1,
+                        "n": {
+                            "1": "0f5n",
+                            "6": "0f2nf2"
+                        },
+                        "t": {
+                            "11": "t52",
+                            "12": "t53"
+                        },
+                        "c": {
+                            "11": [
+                                {
+                                    "i": "t52",
+                                    "r": 1
+                                }
+                            ],
+                            "12": [
+                                {
+                                    "i": "t53",
+                                    "r": 1
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "i": "t50",
+                        "r": 1,
+                        "n": {
+                            "1": "0f5n",
+                            "6": "0f2nf2"
+                        },
+                        "t": {
+                            "11": "t52",
+                            "12": "t53"
+                        },
+                        "c": {
+                            "11": [],
+                            "12": []
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "t": {
+                "3": "t54",
+                "5": "t55"
+            },
+            "c": {
+                "3": [
+                    {
+                        "i": "t54",
+                        "r": 1,
+                        "x": 4
+                    }
+                ],
+                "5": [
+                    {
+                        "i": "t55",
+                        "r": 1,
+                        "x": 5
+                    }
+                ]
+            }
+        },
+        {
+            "c": {
+                "1": [
+                    {
+                        "i": "c1460779089",
+                        "r": 1
+                    }
+                ]
+            }
+        },
+        {
+            "t": {
+                "0": "t0"
+            },
+            "c": {
+                "0": [
+                    {
+                        "i": "t0",
+                        "r": 3,
+                        "c": {
+                            "0": [
+                                {
+                                    "i": "c1255992284",
+                                    "r": 1
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
