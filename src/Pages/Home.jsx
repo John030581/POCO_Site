@@ -266,14 +266,14 @@ const Home = () => {
             </app-header>
             <router-outlet _ngcontent-ng-c1255992284 />
             <app-home _nghost-ng-c1460779089 ngh={0}>
-                <app-banner _ngcontent-ng-c1460779089 _nghost-ng-c474848370 ngh={3}>
+                <app-banner _ngcontent-ng-c14607790 ngh={3}>
                     <section
-                        _ngcontent-ng-c474848370
+                        
                         id="home"
                         className="banner position-relative"
                     >
                         <app-sticky-banner
-                            _ngcontent-ng-c474848370
+                            
                             _nghost-ng-c1353104898
                             ngh={0}
                         >
@@ -545,20 +545,20 @@ const Home = () => {
                                 </marquee>
                             </div>
                         </app-sticky-banner>
-                        <div _ngcontent-ng-c474848370 className="container mt-lg-5 mt-4 pr-32 pl-32">
-                            <div _ngcontent-ng-c474848370 className="bannerSec row">
-                                <div _ngcontent-ng-c474848370 className="col-12 col-md-7 leftSec">
-                                    <div _ngcontent-ng-c474848370 className="banner-content">
-                                        <h1 _ngcontent-ng-c474848370 className="banner-title">
-                                            <span _ngcontent-ng-c474848370 className="d-block">
+                        <div  className="container mt-lg-5 mt-4 pr-32 pl-32">
+                            <div  className="bannerSec row">
+                                <div  className="col-12 col-md-7 leftSec">
+                                    <div  className="banner-content">
+                                        <h1  className="banner-title">
+                                            <span  className="d-block">
                                                 POCO
                                             </span>
-                                            <span _ngcontent-ng-c474848370 className="d-block">
+                                            <span  className="d-block">
                                                 the god of frogs
                                             </span>
                                         </h1>
                                         <h5
-                                            _ngcontent-ng-c474848370
+                                            
                                             className="font-16 fw-normal banner-desc"
                                         >
                                             {" "}
@@ -569,15 +569,15 @@ const Home = () => {
 
                                         
                                         {/* <div
-                                            _ngcontent-ng-c474848370
+                                            
                                             className="info-doc d-none d-md-block text-center"
                                         >
-                                            <p _ngcontent-ng-c474848370 className="content no-margin">
+                                            <p  className="content no-margin">
                                                 {" "}
                                                 % staking rewards
                                             </p>
                                             <span
-                                                _ngcontent-ng-c474848370
+                                                
                                                 className="text-center font-14 text-primary d-block"
                                             >
                                                 What did Pepe miss? Pepeto's about to drop a game-changing
@@ -585,14 +585,14 @@ const Home = () => {
                                             </span>
                                         </div> */}
                                         <img
-                                            _ngcontent-ng-c474848370
+                                            
                                             src="/assets/images/svg-icons/banner-sun.svg"
                                             alt="bg-sun"
                                             loading="eager"
                                             className="img-fluid bg-sun position-absolute mt-5 pt-12"
                                         />
                                         <img
-                                            _ngcontent-ng-c474848370
+                                            
                                             src="/assets/images/gif/banner.gif"
                                             alt="banner-graphic"
                                             loading="eager"
@@ -601,23 +601,23 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div
-                                    _ngcontent-ng-c474848370
+                                    
                                     className="col-12 col-md-5 rightSec align-self-center"
                                 >
                                     <div  className="walletBox">
                                         <div
-                                            _ngcontent-ng-c474848370
+                                            
                                             className="w-100 d-flex flex-column align-items-center justify-content-start text-center"
                                         >
                                             <p
-                                                _ngcontent-ng-c474848370
+                                                
                                                 className="font-24 text-capitalize fw-normal mb-3 font-family-secondary"
                                             >
                                                 Buy $POCO Tokens Now
                                             </p>
 
                                             <div
-                                                _ngcontent-ng-c474848370
+                                                
                                                 className="d-flex align-items-center justify-content-center w-100 gap-2 counter"
                                             >
                                                 <div
@@ -626,61 +626,61 @@ const Home = () => {
                                                     <div  className="value">
                                                         0
                                                     </div>
-                                                    <div _ngcontent-ng-c474848370 className="indicator">
+                                                    <div  className="indicator">
                                                         Days
                                                     </div>
                                                 </div>
                                                 <div
-                                                    _ngcontent-ng-c474848370
+                                                    
                                                     className="rounded-3 time-card text-center"
                                                 >
-                                                    <div _ngcontent-ng-c474848370 className="value">
+                                                    <div  className="value">
                                                         0
                                                     </div>
-                                                    <div _ngcontent-ng-c474848370 className="indicator">
+                                                    <div  className="indicator">
                                                         Hours
                                                     </div>
                                                 </div>
                                                 <div
-                                                    _ngcontent-ng-c474848370
+                                                    
                                                     className="rounded-3 time-card text-center "
                                                 >
-                                                    <div _ngcontent-ng-c474848370 className="value">
+                                                    <div  className="value">
                                                         0
                                                     </div>
-                                                    <div _ngcontent-ng-c474848370 className="indicator">
+                                                    <div  className="indicator">
                                                         Minutes
                                                     </div>
                                                 </div>
                                                 <div
-                                                    _ngcontent-ng-c474848370
+                                                    
                                                     className="rounded-3 time-card text-center "
                                                 >
-                                                    <div _ngcontent-ng-c474848370 className="value">
+                                                    <div  className="value">
                                                         0
                                                     </div>
-                                                    <div _ngcontent-ng-c474848370 className="indicator">
+                                                    <div  className="indicator">
                                                         Seconds
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <p
-                                                _ngcontent-ng-c474848370
+                                                
                                                 className="my-3 fs-7 text-center "
                                             >
-                                                <span _ngcontent-ng-c474848370 className="text-uppercase">
+                                                <span  className="text-uppercase">
                                                     USDT Raised:
                                                 </span>
                                                 <span
-                                                    _ngcontent-ng-c474848370
+                                                    
                                                     className="fw-normal font-family-secondary"
                                                 >
                                                     {" "}
                                                     $0
                                                 </span>
                                                 <span
-                                                    _ngcontent-ng-c474848370
+                                                    
                                                     className="fw-normal text-light font-family-secondary"
                                                 >
                                                     {" "}
@@ -688,29 +688,29 @@ const Home = () => {
                                                 </span>
                                             </p>
                                             <div
-                                                _ngcontent-ng-c474848370
+                                                
                                                 data-percent={0}
                                                 className="progress "
                                             >
-                                                <div _ngcontent-ng-c474848370 className="bar" />
-                                                <div _ngcontent-ng-c474848370 className="status ">
+                                                <div  className="bar" />
+                                                <div  className="status ">
                                                     UNTIL PRICE RISE
                                                 </div>
                                             </div>
 
                                             <div
-                                                _ngcontent-ng-c474848370
+                                                
                                                 className="d-flex justify-content-center align-items-center text-center mb-2 font-12 px-3 mt-3 "
                                             >
-                                                <span _ngcontent-ng-c474848370 className="text-uppercase">
+                                                <span  className="text-uppercase">
                                                     Your purchased $Pepeto
                                                 </span>
-                                                <span _ngcontent-ng-c474848370 className="text-light">
+                                                <span  className="text-light">
                                                     {" "}
                                                     = 0
                                                 </span>
                                                 <img
-                                                    _ngcontent-ng-c474848370
+                                                    
                                                     src="/assets/images/svg-icons/info-icon.svg"
                                                     alt="info-icon"
                                                     loading="eager"
@@ -718,21 +718,21 @@ const Home = () => {
                                                 />
                                             </div>
                                             <div
-                                                _ngcontent-ng-c474848370
+                                                
                                                 className="d-flex justify-content-center align-items-center text-center font-12 px-3 mb-3 "
                                             >
-                                                <span _ngcontent-ng-c474848370 className="text-uppercase">
+                                                <span  className="text-uppercase">
                                                     Your stakeable $Pepeto
                                                 </span>
                                                 <span
-                                                    _ngcontent-ng-c474848370
+                                                    
                                                     className="fw-normal text-light"
                                                 >
                                                     {" "}
                                                     = 0
                                                 </span>
                                                 <img
-                                                    _ngcontent-ng-c474848370
+                                                    
                                                     src="/assets/images/svg-icons/info-icon.svg"
                                                     alt="info"
                                                     loading="eager"
@@ -741,9 +741,9 @@ const Home = () => {
                                             </div>
 
                                         </div>
-                                        <div _ngcontent-ng-c474848370 className="swapArea">
+                                        <div  className="swapArea">
                                             {/* <p
-                                                _ngcontent-ng-c474848370
+                                                
                                                 className="text-center mb-3 font-14 dashTitle"
                                             >
                                                 {" "}
@@ -751,61 +751,61 @@ const Home = () => {
                                             </p> */}
 
                                             <div
-                                                _ngcontent-ng-c474848370
+                                                
                                                 className="tab-container gap-2"
                                             >
                                                 <button
-                                                    _ngcontent-ng-c474848370
+                                                    
                                                     className="btn text-uppercase gap-2 w-100 selected"
                                                 >
                                                     <img
-                                                        _ngcontent-ng-c474848370
+                                                        
                                                         height={26}
                                                         loading="eager"
                                                         src="/assets/images/svg-icons/ETH.svg"
                                                         alt="ETH"
                                                     />
-                                                    <span _ngcontent-ng-c474848370 className="fw-normal">
+                                                    <span  className="fw-normal">
                                                         ETH
                                                     </span>
                                                 </button>
                                                 <button
-                                                    _ngcontent-ng-c474848370
+                                                    
                                                     className="btn text-uppercase gap-2 w-100"
                                                 >
                                                     <img
-                                                        _ngcontent-ng-c474848370
+                                                        
                                                         src="/assets/images/svg-icons/usdt.svg"
                                                         height={26}
                                                         alt="usdt"
                                                         loading="eager"
                                                     />
-                                                    <span _ngcontent-ng-c474848370 className="fw-semibold">
+                                                    <span  className="fw-semibold">
                                                         USDT
                                                     </span>
                                                 </button>
 
                                                 {/* card payment */}
                                                 {/* <button
-                                                    _ngcontent-ng-c474848370
+                                                    
                                                     className="btn text-uppercase gap-2 w-100"
                                                 >
                                                     <img
-                                                        _ngcontent-ng-c474848370
+                                                        
                                                         src="/assets/images/svg-icons/card.svg"
                                                         height={26}
                                                         alt="card"
                                                         loading="eager"
                                                         className="float-start"
                                                     />
-                                                    <span _ngcontent-ng-c474848370 className="fw-semibold">
+                                                    <span  className="fw-semibold">
                                                         Card
                                                     </span>
                                                 </button> */}
                                             </div>
 
                                             <app-swap
-                                                _ngcontent-ng-c474848370
+                                                
                                                 _nghost-ng-c2567803703
                                                 ngh={2}
                                             >
@@ -976,42 +976,42 @@ const Home = () => {
                                             </app-swap>
 
                                             <div
-                                                _ngcontent-ng-c474848370
+                                                
                                                 className="d-flex align-items-center justify-content-center gap-2 mt-4"
                                             >
                                                 <button
-                                                    _ngcontent-ng-c474848370
+                                                    
                                                     className="btn btn-secondary w-50"
                                                 >
-                                                    <span _ngcontent-ng-c474848370>Connect Wallet</span>
+                                                    <span >Connect Wallet</span>
                                                 </button>
                                                 <button
-                                                    _ngcontent-ng-c474848370
+                                                    
                                                     className="btn btn-secondary w-50 px-2"
                                                 >
                                                     <img
-                                                        _ngcontent-ng-c474848370
+                                                        
                                                         height={18}
                                                         alt=""
                                                         loading="eager"
                                                         className="me-2"
                                                         src="/assets/images/svg-icons/BNB.svg"
                                                     />
-                                                    <span _ngcontent-ng-c474848370>Buy with BNB</span>
+                                                    <span >Buy with BNB</span>
                                                 </button>
 
                                             </div>
 
-                                            <div _ngcontent-ng-c474848370 className="mt-3">
+                                            <div  className="mt-3">
                                                 <p
-                                                    _ngcontent-ng-c474848370
+                                                    
                                                     className="font-13 text-center mb-1"
                                                 >
 
 
                                                 </p>
                                                 <a
-                                                    _ngcontent-ng-c474848370
+                                                    
                                                     href="https://metamask.io"
                                                     target="_blank"
                                                     className="m-2 d-block text-decoration-underline text-center mx-auto text-white fw-semibold font-14"
@@ -1020,17 +1020,17 @@ const Home = () => {
                                                 </a>
 
                                                 <p
-                                                    _ngcontent-ng-c474848370
+                                                    
                                                     className="font-14 text-center fw-normal mb-0 flex justify-center align-items-center"
                                                 >
-                                                    <span _ngcontent-ng-c474848370>Powered by</span>
+                                                    <span >Powered by</span>
                                                     <a
-                                                        _ngcontent-ng-c474848370
+                                                        
                                                         href="https://web3paymentsolutions.io"
                                                         target="_blank"
                                                     >
                                                         <img
-                                                            _ngcontent-ng-c474848370
+                                                            
                                                             src="/assets/images/svg-icons/W3P_White.svg"
                                                             alt="W3P_White"
                                                             loading="eager"
@@ -1044,28 +1044,28 @@ const Home = () => {
                                 </div>
                             </div>
                             <div
-                                _ngcontent-ng-c474848370
+                                
                                 className="buttons d-flex d-sm-none flex-column align-items-center justify-content-center"
                             >
-                                <div _ngcontent-ng-c474848370 className="btn-wrapper my-2">
+                                <div  className="btn-wrapper my-2">
                                     <span
-                                        _ngcontent-ng-c474848370
+                                        
                                         className="d-block text-center fw-bold mt-2 font-18"
                                     >
                                         Trust and Safety Audits
                                     </span>
                                     <div
-                                        _ngcontent-ng-c474848370
+                                        
                                         className="mb-2 d-flex align-items-center justify-content-between mt-2 mb-2"
                                     >
                                         <a
-                                            _ngcontent-ng-c474848370
+                                            
                                             href="https://coinsult.net/projects/pepeto/"
                                             target="_blank"
                                             className="px-2 w-50 mt-lg-0 mb-lg-0"
                                         >
                                             <img
-                                                _ngcontent-ng-c474848370
+                                                
                                                 src="/assets/images/svg-icons/coinsult.svg"
                                                 alt="coin-slut"
                                                 loading="lazy"
@@ -1073,13 +1073,13 @@ const Home = () => {
                                             />
                                         </a>
                                         <a
-                                            _ngcontent-ng-c474848370
+                                            
                                             href="/assets/documents/audit-solidproof.pdf"
                                             target="_blank"
                                             className="px-2 w-50 mt-lg-0 mb-lg-0"
                                         >
                                             <img
-                                                _ngcontent-ng-c474848370
+                                                
                                                 src="/assets/images/svg-icons/solidproof.svg"
                                                 alt="solid-proof"
                                                 loading="lazy"
@@ -1089,13 +1089,13 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <a
-                                    _ngcontent-ng-c474848370
+                                    
                                     target="_blank"
                                     href="#"
                                     className="item exchange my-2"
                                 >
                                     <svg-icon
-                                        _ngcontent-ng-c474848370
+                                        
                                         src="./assets/images/svg-icons/from.svg"
                                         className="icon ms-2"
                                         ngh={0}
@@ -1106,7 +1106,7 @@ const Home = () => {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
-                                            _ngcontent-ng-c474848370
+                                            
                                             aria-hidden="true"
                                             style={{ width: "24px", height: "24px" }}
                                         >
@@ -1118,7 +1118,7 @@ const Home = () => {
                                                 rx="3.5"
                                                 stroke="#191700"
                                                 strokeWidth={2}
-                                                _ngcontent-ng-c474848370
+                                                
                                             />
                                             <path
                                                 d="M9 15L15 9M15 9H9M15 9V15"
@@ -1126,20 +1126,20 @@ const Home = () => {
                                                 strokeWidth={2}
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
-                                                _ngcontent-ng-c474848370
+                                                
                                             />
                                         </svg>
                                     </svg-icon>{" "}
                                     Exchange{" "}
                                 </a>
                                 <a
-                                    _ngcontent-ng-c474848370
+                                    
                                     target="_blank"
                                     href="https://etherscan.io/address/0x588B92b0B793A339A21eF89320EcfA49de249503"
                                     className="item contract my-2"
                                 >
                                     <svg-icon
-                                        _ngcontent-ng-c474848370
+                                        
                                         src="./assets/images/svg-icons/from.svg"
                                         className="icon ms-2"
                                         ngh={0}
@@ -1150,7 +1150,7 @@ const Home = () => {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
-                                            _ngcontent-ng-c474848370
+                                            
                                             aria-hidden="true"
                                             style={{ width: "24px", height: "24px" }}
                                         >
@@ -1162,7 +1162,7 @@ const Home = () => {
                                                 rx="3.5"
                                                 stroke="#191700"
                                                 strokeWidth={2}
-                                                _ngcontent-ng-c474848370
+                                                
                                             />
                                             <path
                                                 d="M9 15L15 9M15 9H9M15 9V15"
@@ -1170,21 +1170,21 @@ const Home = () => {
                                                 strokeWidth={2}
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
-                                                _ngcontent-ng-c474848370
+                                                
                                             />
                                         </svg>
                                     </svg-icon>{" "}
                                     Contract{" "}
                                 </a>
                                 <a
-                                    _ngcontent-ng-c474848370
+                                    
                                     title="giveaway"
                                     routerlinkactive="active"
                                     className="item contract my-2"
                                     href="/giveaway"
                                 >
                                     <svg-icon
-                                        _ngcontent-ng-c474848370
+                                        
                                         src="./assets/images/svg-icons/from.svg"
                                         className="icon ms-2"
                                         ngh={0}
@@ -1195,7 +1195,7 @@ const Home = () => {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
-                                            _ngcontent-ng-c474848370
+                                            
                                             aria-hidden="true"
                                             style={{ width: "24px", height: "24px" }}
                                         >
@@ -1207,7 +1207,7 @@ const Home = () => {
                                                 rx="3.5"
                                                 stroke="#191700"
                                                 strokeWidth={2}
-                                                _ngcontent-ng-c474848370
+                                                
                                             />
                                             <path
                                                 d="M9 15L15 9M15 9H9M15 9V15"
@@ -1215,7 +1215,7 @@ const Home = () => {
                                                 strokeWidth={2}
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
-                                                _ngcontent-ng-c474848370
+                                                
                                             />
                                         </svg>
                                     </svg-icon>{" "}
@@ -1627,13 +1627,14 @@ const Home = () => {
                                                     <img
                                                         _ngcontent-ng-c2966608895
                                                         alt="youtube_poster"
-                                                        className="                  thumbnail"
+                                                        className="thumbnail"
                                                         src="http://img.youtube.com/vi/9QH1ch87J3M/0.jpg"
                                                     />
                                                     <img
                                                         _ngcontent-ng-c2966608895
                                                         src="/assets/images/png/youtube-icon.png"
-                                                        alt="youtube_poster"                 
+                                                        alt="youtube_poster"    
+                                                        className="youtube-icon"             
                                                     />
                                                 </div>
                                             </div>
