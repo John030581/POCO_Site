@@ -1,4 +1,50 @@
+import { useWallet } from '../hooks/useWallet';
+import { useState } from 'react';
+import toast from 'react-hot-toast';
+import ValueCarousel from '../Components/ValueCarousel';
+import RoadmapCarousel from '../Components/RoadmapCarousel';
+import FAQAccordion from '../Components/FAQAccordion';
+
 const Home = () => {
+    const { isConnected, address, formattedAddress, connectWallet, disconnectWallet, balance, chain } = useWallet();
+    const [isConnecting, setIsConnecting] = useState(false);
+    const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('ETH'); // Default to ETH
+
+    const handleConnectWallet = async () => {
+        setIsConnecting(true);
+        try {
+            await connectWallet();
+            toast.success('Wallet connected successfully!');
+        } catch (error) {
+            console.error('Connection error:', error);
+            toast.error('Failed to connect wallet. Please try again.');
+        } finally {
+            setIsConnecting(false);
+        }
+    };
+
+    const handleDisconnectWallet = async () => {
+        try {
+            await disconnectWallet();
+            toast.success('Wallet disconnected');
+        } catch (error) {
+            console.error('Disconnect error:', error);
+            toast.error('Failed to disconnect wallet');
+        }
+    };
+
+    const handleTogglePaymentMethod = () => {
+        // Toggle between ETH and BNB
+        setSelectedPaymentMethod(prevMethod => {
+            if (prevMethod === 'ETH') {
+                return 'BNB';
+            } else if (prevMethod === 'BNB') {
+                return 'ETH';
+            }
+            // If USDT, switch to BNB
+            return 'BNB';
+        });
+    };
 
     return (
         <app-language _nghost-ng-c1255992284 ngh={13}>
@@ -134,66 +180,25 @@ const Home = () => {
                                         </a>
 
                                     </span> */}
-                                    <div
-                                        _ngcontent-ng-c47258724
-                                        className="btn btn-primary d-flex align-items-center font-16 ms-3 text-uppercase"
-                                    >
-                                        Buy $POCO
-                                    </div>
-                                    
-                                    {/* <div
-                                        _ngcontent-ng-c47258724
-                                        dropdown
-                                        className="btn-group language ms-3"
-                                    >
-                                        <div
-                                            _ngcontent-ng-c47258724
-                                            dropdowntoggle
-                                            type="button"
-                                            className="dropdown-toggle amountType d-flex align-items-center"
-                                            aria-haspopup="true"
-                                            aria-expanded="false"
+                                    {!isConnected ? (
+                                        <button
+                                            onClick={handleConnectWallet}
+                                            disabled={isConnecting}
+                                            className="btn btn-primary d-flex align-items-center font-16 ms-3 text-uppercase"
                                         >
-                                            <div
-                                                _ngcontent-ng-c47258724
-                                                className="font-12 text-uppercase fw-semibold"
-                                            >
-                                                en
-                                            </div>
-                                            <svg-icon
-                                                _ngcontent-ng-c47258724
-                                                src="./assets/images/svg-icons/arrow.down-white.svg"
-                                                className="dropdown ms-2"
-                                                ngh={0}
-                                            >
-                                                <svg
-                                                    width={8}
-                                                    height={14}
-                                                    viewBox="0 0 8 14"
-                                                    fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg"
-                                                    _ngcontent-ng-c47258724
-                                                    aria-hidden="true"
-                                                    style={{
-                                                        width: "14px",
-                                                        height: "22px",
-                                                        marginTop: "-4px",
-                                                    }}
-                                                >
-                                                    <path
-                                                        d="M7 6.00006L4 9.00006L0.999999 6.00006"
-                                                        stroke="white"
-                                                        strokeWidth={2}
-                                                        strokeMiterlimit="3.8637"
-                                                        strokeLinecap="round"
-                                                        strokeLinejoin="round"
-                                                        _ngcontent-ng-c47258724
-                                                    />
-                                                </svg>
-                                            </svg-icon>
-                                        </div>
-
-                                    </div> */}
+                                            {isConnecting ? 'Connecting...' : 'Buy $POCO'}
+                                        </button>
+                                    ) : (
+                                        <button
+                                            onClick={handleDisconnectWallet}
+                                            className="btn btn-primary d-flex align-items-center font-14 text-uppercase ms-3"
+                                            title={address}
+                                        >
+                                            <span className="text-truncate" style={{ maxWidth: '100px' }}>
+                                                {formattedAddress}
+                                            </span>
+                                        </button>
+                                    )}
 
                                 </div>
                             </div>
@@ -268,12 +273,12 @@ const Home = () => {
             <app-home _nghost-ng-c1460779089 ngh={0}>
                 <app-banner _ngcontent-ng-c14607790 ngh={3}>
                     <section
-                        
+
                         id="home"
                         className="banner position-relative"
                     >
                         <app-sticky-banner
-                            
+
                             _nghost-ng-c1353104898
                             ngh={0}
                         >
@@ -545,20 +550,20 @@ const Home = () => {
                                 </marquee>
                             </div>
                         </app-sticky-banner>
-                        <div  className="container mt-lg-5 mt-4 pr-32 pl-32">
-                            <div  className="bannerSec row">
-                                <div  className="col-12 col-md-7 leftSec">
-                                    <div  className="banner-content">
-                                        <h1  className="banner-title">
-                                            <span  className="d-block">
+                        <div className="container mt-lg-5 mt-4 pr-32 pl-32">
+                            <div className="bannerSec row">
+                                <div className="col-12 col-md-7 leftSec">
+                                    <div className="banner-content">
+                                        <h1 className="banner-title">
+                                            <span className="d-block">
                                                 POCO
                                             </span>
-                                            <span  className="d-block">
+                                            <span className="d-block">
                                                 the god of frogs
                                             </span>
                                         </h1>
                                         <h5
-                                            
+
                                             className="font-16 fw-normal banner-desc"
                                         >
                                             {" "}
@@ -567,7 +572,7 @@ const Home = () => {
                                             skyrockets!{" "}
                                         </h5>
 
-                                        
+
                                         {/* <div
                                             
                                             className="info-doc d-none d-md-block text-center"
@@ -585,14 +590,14 @@ const Home = () => {
                                             </span>
                                         </div> */}
                                         <img
-                                            
+
                                             src="/assets/images/svg-icons/banner-sun.svg"
                                             alt="bg-sun"
                                             loading="eager"
                                             className="img-fluid bg-sun position-absolute mt-5 pt-12"
                                         />
                                         <img
-                                            
+
                                             src="/assets/images/gif/banner.gif"
                                             alt="banner-graphic"
                                             loading="eager"
@@ -601,86 +606,86 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <div
-                                    
+
                                     className="col-12 col-md-5 rightSec align-self-center"
                                 >
-                                    <div  className="walletBox">
+                                    <div className="walletBox">
                                         <div
-                                            
+
                                             className="w-100 d-flex flex-column align-items-center justify-content-start text-center"
                                         >
                                             <p
-                                                
+
                                                 className="font-24 text-capitalize fw-normal mb-3 font-family-secondary"
                                             >
                                                 Buy $POCO Tokens Now
                                             </p>
 
                                             <div
-                                                
+
                                                 className="d-flex align-items-center justify-content-center w-100 gap-2 counter"
                                             >
                                                 <div
                                                     className="rounded-3 time-card text-center d-flex "
                                                 >
-                                                    <div  className="value">
+                                                    <div className="value">
                                                         0
                                                     </div>
-                                                    <div  className="indicator">
+                                                    <div className="indicator">
                                                         Days
                                                     </div>
                                                 </div>
                                                 <div
-                                                    
+
                                                     className="rounded-3 time-card text-center"
                                                 >
-                                                    <div  className="value">
+                                                    <div className="value">
                                                         0
                                                     </div>
-                                                    <div  className="indicator">
+                                                    <div className="indicator">
                                                         Hours
                                                     </div>
                                                 </div>
                                                 <div
-                                                    
+
                                                     className="rounded-3 time-card text-center "
                                                 >
-                                                    <div  className="value">
+                                                    <div className="value">
                                                         0
                                                     </div>
-                                                    <div  className="indicator">
+                                                    <div className="indicator">
                                                         Minutes
                                                     </div>
                                                 </div>
                                                 <div
-                                                    
+
                                                     className="rounded-3 time-card text-center "
                                                 >
-                                                    <div  className="value">
+                                                    <div className="value">
                                                         0
                                                     </div>
-                                                    <div  className="indicator">
+                                                    <div className="indicator">
                                                         Seconds
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <p
-                                                
+
                                                 className="my-3 fs-7 text-center "
                                             >
-                                                <span  className="text-uppercase">
+                                                <span className="text-uppercase">
                                                     USDT Raised:
                                                 </span>
                                                 <span
-                                                    
+
                                                     className="fw-normal font-family-secondary"
                                                 >
                                                     {" "}
                                                     $0
                                                 </span>
                                                 <span
-                                                    
+
                                                     className="fw-normal text-light font-family-secondary"
                                                 >
                                                     {" "}
@@ -688,36 +693,52 @@ const Home = () => {
                                                 </span>
                                             </p>
                                             <div
-                                                
+
                                                 data-percent={0}
                                                 className="progress "
                                             >
-                                                <div  className="bar" />
-                                                <div  className="status ">
+                                                <div className="bar" />
+                                                <div className="status ">
                                                     UNTIL PRICE RISE
                                                 </div>
                                             </div>
 
+                                            {isConnected && (
+                                                <div className="d-flex justify-content-center align-items-center text-center mb-2 font-12 px-3 mt-3">
+                                                    <span className="text-uppercase text-success me-2">
+                                                        ✓ Connected
+                                                    </span>
+                                                    <span className="text-light">
+                                                        {formattedAddress}
+                                                    </span>
+                                                    {chain && (
+                                                        <span className="text-light ms-2">
+                                                            ({chain.name})
+                                                        </span>
+                                                    )}
+                                                </div>
+                                            )}
+
                                             <div
-                                                
+
                                                 className="d-flex justify-content-center align-items-center text-center mb-2 font-12 px-3 mt-3 "
                                             >
-                                                <span  className="text-uppercase">
-                                                    Your purchased $Pepeto
+                                                <span className="text-uppercase">
+                                                    Your purchased $POCO
                                                 </span>
-                                                <span  className="text-light">
+                                                <span className="text-light">
                                                     {" "}
                                                     = 0
                                                 </span>
                                                 <img
-                                                    
+
                                                     src="/assets/images/svg-icons/info-icon.svg"
                                                     alt="info-icon"
                                                     loading="eager"
                                                     className="img-fluid ms-2 cursor-pointer"
                                                 />
                                             </div>
-                                            <div
+                                            {/* <div
                                                 
                                                 className="d-flex justify-content-center align-items-center text-center font-12 px-3 mb-3 "
                                             >
@@ -738,49 +759,46 @@ const Home = () => {
                                                     loading="eager"
                                                     className="img-fluid ms-2 cursor-pointer"
                                                 />
-                                            </div>
+                                            </div> */}
 
                                         </div>
-                                        <div  className="swapArea">
-                                            {/* <p
-                                                
+                                        <div className="swapArea">
+                                            <p
+
                                                 className="text-center mb-3 font-14 dashTitle"
                                             >
                                                 {" "}
-                                                1 $Pepeto = $0.033700000{" "}
-                                            </p> */}
-
+                                                1 $POCO = $0.033700000{" "}
+                                            </p>
                                             <div
-                                                
+
                                                 className="tab-container gap-2"
                                             >
                                                 <button
-                                                    
-                                                    className="btn text-uppercase gap-2 w-100 selected"
+                                                    onClick={() => setSelectedPaymentMethod(selectedPaymentMethod === 'BNB' ? 'BNB' : 'ETH')}
+                                                    className={`btn text-uppercase gap-2 w-100 ${(selectedPaymentMethod === 'ETH' || selectedPaymentMethod === 'BNB') ? 'selected' : ''}`}
                                                 >
                                                     <img
-                                                        
-                                                        height={26}
                                                         loading="eager"
-                                                        src="/assets/images/svg-icons/ETH.svg"
-                                                        alt="ETH"
+                                                        src={selectedPaymentMethod === 'BNB' ? "/assets/images/svg-icons/BNB.svg" : "/assets/images/svg-icons/ETH.svg"}
+                                                        alt={selectedPaymentMethod === 'BNB' ? "BNB" : "ETH"}
+                                                        className="h-full"
                                                     />
-                                                    <span  className="fw-normal">
-                                                        ETH
+                                                    <span className="fw-normal">
+                                                        {selectedPaymentMethod === 'BNB' ? 'BNB' : 'ETH'}
                                                     </span>
                                                 </button>
                                                 <button
-                                                    
-                                                    className="btn text-uppercase gap-2 w-100"
+                                                    onClick={() => setSelectedPaymentMethod('USDT')}
+                                                    className={`btn text-uppercase gap-2 w-100 ${selectedPaymentMethod === 'USDT' ? 'selected' : ''}`}
                                                 >
                                                     <img
-                                                        
                                                         src="/assets/images/svg-icons/usdt.svg"
-                                                        height={26}
+                                                        className="h-full"
                                                         alt="usdt"
                                                         loading="eager"
                                                     />
-                                                    <span  className="fw-semibold">
+                                                    <span className="fw-semibold">
                                                         USDT
                                                     </span>
                                                 </button>
@@ -793,7 +811,7 @@ const Home = () => {
                                                     <img
                                                         
                                                         src="/assets/images/svg-icons/card.svg"
-                                                        height={26}
+                                                        height={18}
                                                         alt="card"
                                                         loading="eager"
                                                         className="float-start"
@@ -805,7 +823,7 @@ const Home = () => {
                                             </div>
 
                                             <app-swap
-                                                
+
                                                 _nghost-ng-c2567803703
                                                 ngh={2}
                                             >
@@ -832,7 +850,7 @@ const Home = () => {
                                                                         _ngcontent-ng-c2567803703
                                                                         className="d-block font-12 text-light"
                                                                     >
-                                                                        Pay with ETH
+                                                                        Pay with {selectedPaymentMethod}
                                                                     </label>
                                                                     <div
                                                                         _ngcontent-ng-c2567803703
@@ -851,60 +869,76 @@ const Home = () => {
                                                                         apptwodigitdecimalnumber
                                                                         placeholder={0}
                                                                         className="form-control text-truncate ng-untouched ng-pristine ng-valid"
-                                                                        defaultValue
+                                                                        defaultValue={0}
                                                                     />
                                                                     <div
                                                                         _ngcontent-ng-c2567803703
                                                                         className="amountType"
                                                                     >
-                                                                        <svg-icon _ngcontent-ng-c2567803703 ngh={0}>
-                                                                            <svg
-                                                                                width={50}
-                                                                                height={50}
-                                                                                viewBox="0 0 50 50"
-                                                                                fill="none"
-                                                                                xmlns="http://www.w3.org/2000/svg"
-                                                                                _ngcontent-ng-c2567803703
-                                                                                aria-hidden="true"
+                                                                        {selectedPaymentMethod === 'ETH' ? (
+                                                                            <svg-icon _ngcontent-ng-c2567803703 ngh={0}>
+                                                                                <svg
+                                                                                    width={50}
+                                                                                    height={50}
+                                                                                    viewBox="0 0 50 50"
+                                                                                    fill="none"
+                                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                                    _ngcontent-ng-c2567803703
+                                                                                    aria-hidden="true"
+                                                                                    style={{ width: "28px", height: "28px" }}
+                                                                                >
+                                                                                    <path
+                                                                                        d="M25.1435 49.5432C38.7831 49.5432 49.8401 38.4529 49.8401 24.7716C49.8401 11.0902 38.7831 0 25.1435 0C11.5039 0 0.446777 11.0902 0.446777 24.7716C0.446777 38.4529 11.5039 49.5432 25.1435 49.5432Z"
+                                                                                        fill="#4793FF"
+                                                                                        _ngcontent-ng-c2567803703
+                                                                                    />
+                                                                                    <path
+                                                                                        d="M25.1436 0C38.7613 0 49.8402 11.1125 49.8402 24.7716C49.8402 38.4306 38.7613 49.5432 25.1436 49.5432V0Z"
+                                                                                        fill="#5E69E2"
+                                                                                        _ngcontent-ng-c2567803703
+                                                                                    />
+                                                                                    <path
+                                                                                        d="M25.1432 43.3244C35.3586 43.3244 43.6399 35.0184 43.6399 24.7717C43.6399 14.5249 35.3586 6.21899 25.1432 6.21899C14.9277 6.21899 6.64648 14.5249 6.64648 24.7717C6.64648 35.0184 14.9277 43.3244 25.1432 43.3244Z"
+                                                                                        fill="#2EBEEF"
+                                                                                        _ngcontent-ng-c2567803703
+                                                                                    />
+                                                                                    <path
+                                                                                        d="M25.1436 6.21899C35.3427 6.21899 43.6403 14.541 43.6403 24.7717C43.6403 35.0023 35.3427 43.3244 25.1436 43.3244V6.21899Z"
+                                                                                        fill="#4793FF"
+                                                                                        _ngcontent-ng-c2567803703
+                                                                                    />
+                                                                                    <path
+                                                                                        d="M23.9395 12.3066L16.1896 23.9666C15.8655 24.4533 15.8655 25.0887 16.1896 25.5767L23.9395 37.2367C24.5122 38.0987 25.7747 38.0987 26.3475 37.2367L34.0973 25.5767C34.4215 25.0887 34.4215 24.4533 34.0973 23.9666L26.3475 12.3066C25.7747 11.4445 24.5123 11.4445 23.9395 12.3066Z"
+                                                                                        fill="#76E5F6"
+                                                                                        _ngcontent-ng-c2567803703
+                                                                                    />
+                                                                                    <path
+                                                                                        d="M25.1436 26.6468V37.8832C25.6024 37.8832 26.0612 37.6677 26.3476 37.2367L34.0975 25.5767C34.2481 25.35 34.3279 25.0912 34.3384 24.8311L25.4273 26.6183C25.3337 26.6369 25.2386 26.6468 25.1436 26.6468Z"
+                                                                                        fill="#2EBEEF"
+                                                                                        _ngcontent-ng-c2567803703
+                                                                                    />
+                                                                                    <path
+                                                                                        d="M25.143 11.66C24.6842 11.66 24.2254 11.8756 23.939 12.3066L16.1891 23.9666C16.0158 24.2279 15.9361 24.5301 15.9482 24.8311L24.8592 26.6183C24.9529 26.6369 25.048 26.6468 25.143 26.6468V11.66Z"
+                                                                                        fill="#C2F4FB"
+                                                                                        _ngcontent-ng-c2567803703
+                                                                                    />
+                                                                                </svg>
+                                                                            </svg-icon>
+                                                                        ) : selectedPaymentMethod === 'BNB' ? (
+                                                                            <img
+                                                                                src="/assets/images/svg-icons/BNB.svg"
+                                                                                alt="BNB"
+                                                                                loading="eager"
                                                                                 style={{ width: "28px", height: "28px" }}
-                                                                            >
-                                                                                <path
-                                                                                    d="M25.1435 49.5432C38.7831 49.5432 49.8401 38.4529 49.8401 24.7716C49.8401 11.0902 38.7831 0 25.1435 0C11.5039 0 0.446777 11.0902 0.446777 24.7716C0.446777 38.4529 11.5039 49.5432 25.1435 49.5432Z"
-                                                                                    fill="#4793FF"
-                                                                                    _ngcontent-ng-c2567803703
-                                                                                />
-                                                                                <path
-                                                                                    d="M25.1436 0C38.7613 0 49.8402 11.1125 49.8402 24.7716C49.8402 38.4306 38.7613 49.5432 25.1436 49.5432V0Z"
-                                                                                    fill="#5E69E2"
-                                                                                    _ngcontent-ng-c2567803703
-                                                                                />
-                                                                                <path
-                                                                                    d="M25.1432 43.3244C35.3586 43.3244 43.6399 35.0184 43.6399 24.7717C43.6399 14.5249 35.3586 6.21899 25.1432 6.21899C14.9277 6.21899 6.64648 14.5249 6.64648 24.7717C6.64648 35.0184 14.9277 43.3244 25.1432 43.3244Z"
-                                                                                    fill="#2EBEEF"
-                                                                                    _ngcontent-ng-c2567803703
-                                                                                />
-                                                                                <path
-                                                                                    d="M25.1436 6.21899C35.3427 6.21899 43.6403 14.541 43.6403 24.7717C43.6403 35.0023 35.3427 43.3244 25.1436 43.3244V6.21899Z"
-                                                                                    fill="#4793FF"
-                                                                                    _ngcontent-ng-c2567803703
-                                                                                />
-                                                                                <path
-                                                                                    d="M23.9395 12.3066L16.1896 23.9666C15.8655 24.4533 15.8655 25.0887 16.1896 25.5767L23.9395 37.2367C24.5122 38.0987 25.7747 38.0987 26.3475 37.2367L34.0973 25.5767C34.4215 25.0887 34.4215 24.4533 34.0973 23.9666L26.3475 12.3066C25.7747 11.4445 24.5123 11.4445 23.9395 12.3066Z"
-                                                                                    fill="#76E5F6"
-                                                                                    _ngcontent-ng-c2567803703
-                                                                                />
-                                                                                <path
-                                                                                    d="M25.1436 26.6468V37.8832C25.6024 37.8832 26.0612 37.6677 26.3476 37.2367L34.0975 25.5767C34.2481 25.35 34.3279 25.0912 34.3384 24.8311L25.4273 26.6183C25.3337 26.6369 25.2386 26.6468 25.1436 26.6468Z"
-                                                                                    fill="#2EBEEF"
-                                                                                    _ngcontent-ng-c2567803703
-                                                                                />
-                                                                                <path
-                                                                                    d="M25.143 11.66C24.6842 11.66 24.2254 11.8756 23.939 12.3066L16.1891 23.9666C16.0158 24.2279 15.9361 24.5301 15.9482 24.8311L24.8592 26.6183C24.9529 26.6369 25.048 26.6468 25.143 26.6468V11.66Z"
-                                                                                    fill="#C2F4FB"
-                                                                                    _ngcontent-ng-c2567803703
-                                                                                />
-                                                                            </svg>
-                                                                        </svg-icon>
+                                                                            />
+                                                                        ) : (
+                                                                            <img
+                                                                                src="/assets/images/svg-icons/usdt.svg"
+                                                                                alt="USDT"
+                                                                                loading="eager"
+                                                                                style={{ width: "28px", height: "28px" }}
+                                                                            />
+                                                                        )}
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -956,62 +990,75 @@ const Home = () => {
                                                                 _ngcontent-ng-c2567803703
                                                                 className="col-12 text-center fs-8"
                                                             >
-
-
-
-
-
                                                             </div>
                                                         </div>
 
                                                     </div>
-
-
-
-
-
-
-
                                                 </div>
                                             </app-swap>
 
                                             <div
-                                                
+
                                                 className="d-flex align-items-center justify-content-center gap-2 mt-4"
                                             >
-                                                <button
-                                                    
-                                                    className="btn btn-secondary w-50"
-                                                >
-                                                    <span >Connect Wallet</span>
-                                                </button>
-                                                <button
-                                                    
-                                                    className="btn btn-secondary w-50 px-2"
-                                                >
-                                                    <img
-                                                        
-                                                        height={18}
-                                                        alt=""
-                                                        loading="eager"
-                                                        className="me-2"
-                                                        src="/assets/images/svg-icons/BNB.svg"
-                                                    />
-                                                    <span >Buy with BNB</span>
-                                                </button>
-
+                                                {!isConnected ? (
+                                                    <>
+                                                        <button
+                                                            onClick={handleConnectWallet}
+                                                            disabled={isConnecting}
+                                                            className="btn btn-secondary w-50"
+                                                        >
+                                                            <span>{isConnecting ? 'Connecting...' : 'Connect Wallet'}</span>
+                                                        </button>
+                                                        <button
+                                                            onClick={handleTogglePaymentMethod}
+                                                            className="btn btn-secondary w-50 px-2"
+                                                            disabled={!isConnected}
+                                                        >
+                                                            <img
+                                                                alt={selectedPaymentMethod === 'BNB' ? 'ETH' : 'BNB'}
+                                                                loading="eager"
+                                                                className="me-2"
+                                                                style={{ height: '16px' }}
+                                                                src={selectedPaymentMethod === 'BNB' ? '/assets/images/svg-icons/ETH.svg' : '/assets/images/svg-icons/BNB.svg'}
+                                                            />
+                                                            <span>Buy with {selectedPaymentMethod === 'BNB' ? 'ETH' : 'BNB'}</span>
+                                                        </button>
+                                                    </>
+                                                ) : (
+                                                    <>
+                                                        <button
+                                                            className="btn btn-primary w-50"
+                                                        >
+                                                            <span>Buy $POCO</span>
+                                                        </button>
+                                                        <button
+                                                            onClick={handleTogglePaymentMethod}
+                                                            className="btn btn-secondary w-50 px-2"
+                                                        >
+                                                            <img
+                                                                alt={selectedPaymentMethod === 'BNB' ? 'ETH' : 'BNB'}
+                                                                loading="eager"
+                                                                className="me-2"
+                                                                style={{ height: '16px' }}
+                                                                src={selectedPaymentMethod === 'BNB' ? '/assets/images/svg-icons/ETH.svg' : '/assets/images/svg-icons/BNB.svg'}
+                                                            />
+                                                            <span>Buy with {selectedPaymentMethod === 'BNB' ? 'ETH' : 'BNB'}</span>
+                                                        </button>
+                                                    </>
+                                                )}
                                             </div>
 
-                                            <div  className="mt-3">
+                                            <div className="mt-3">
                                                 <p
-                                                    
+
                                                     className="font-13 text-center mb-1"
                                                 >
 
 
                                                 </p>
                                                 <a
-                                                    
+
                                                     href="https://metamask.io"
                                                     target="_blank"
                                                     className="m-2 d-block text-decoration-underline text-center mx-auto text-white fw-semibold font-14"
@@ -1020,17 +1067,17 @@ const Home = () => {
                                                 </a>
 
                                                 <p
-                                                    
+
                                                     className="font-14 text-center fw-normal mb-0 flex justify-center align-items-center"
                                                 >
                                                     <span >Powered by</span>
                                                     <a
-                                                        
+
                                                         href="https://web3paymentsolutions.io"
                                                         target="_blank"
                                                     >
                                                         <img
-                                                            
+
                                                             src="/assets/images/svg-icons/W3P_White.svg"
                                                             alt="W3P_White"
                                                             loading="eager"
@@ -1044,28 +1091,28 @@ const Home = () => {
                                 </div>
                             </div>
                             <div
-                                
+
                                 className="buttons d-flex d-sm-none flex-column align-items-center justify-content-center"
                             >
-                                <div  className="btn-wrapper my-2">
+                                <div className="btn-wrapper my-2">
                                     <span
-                                        
+
                                         className="d-block text-center fw-bold mt-2 font-18"
                                     >
                                         Trust and Safety Audits
                                     </span>
                                     <div
-                                        
+
                                         className="mb-2 d-flex align-items-center justify-content-between mt-2 mb-2"
                                     >
                                         <a
-                                            
+
                                             href="https://coinsult.net/projects/pepeto/"
                                             target="_blank"
                                             className="px-2 w-50 mt-lg-0 mb-lg-0"
                                         >
                                             <img
-                                                
+
                                                 src="/assets/images/svg-icons/coinsult.svg"
                                                 alt="coin-slut"
                                                 loading="lazy"
@@ -1073,13 +1120,13 @@ const Home = () => {
                                             />
                                         </a>
                                         <a
-                                            
+
                                             href="/assets/documents/audit-solidproof.pdf"
                                             target="_blank"
                                             className="px-2 w-50 mt-lg-0 mb-lg-0"
                                         >
                                             <img
-                                                
+
                                                 src="/assets/images/svg-icons/solidproof.svg"
                                                 alt="solid-proof"
                                                 loading="lazy"
@@ -1089,13 +1136,13 @@ const Home = () => {
                                     </div>
                                 </div>
                                 <a
-                                    
+
                                     target="_blank"
                                     href="#"
                                     className="item exchange my-2"
                                 >
                                     <svg-icon
-                                        
+
                                         src="./assets/images/svg-icons/from.svg"
                                         className="icon ms-2"
                                         ngh={0}
@@ -1106,7 +1153,7 @@ const Home = () => {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
-                                            
+
                                             aria-hidden="true"
                                             style={{ width: "24px", height: "24px" }}
                                         >
@@ -1118,7 +1165,7 @@ const Home = () => {
                                                 rx="3.5"
                                                 stroke="#191700"
                                                 strokeWidth={2}
-                                                
+
                                             />
                                             <path
                                                 d="M9 15L15 9M15 9H9M15 9V15"
@@ -1126,20 +1173,20 @@ const Home = () => {
                                                 strokeWidth={2}
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
-                                                
+
                                             />
                                         </svg>
                                     </svg-icon>{" "}
                                     Exchange{" "}
                                 </a>
                                 <a
-                                    
+
                                     target="_blank"
                                     href="https://etherscan.io/address/0x588B92b0B793A339A21eF89320EcfA49de249503"
                                     className="item contract my-2"
                                 >
                                     <svg-icon
-                                        
+
                                         src="./assets/images/svg-icons/from.svg"
                                         className="icon ms-2"
                                         ngh={0}
@@ -1150,7 +1197,7 @@ const Home = () => {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
-                                            
+
                                             aria-hidden="true"
                                             style={{ width: "24px", height: "24px" }}
                                         >
@@ -1162,7 +1209,7 @@ const Home = () => {
                                                 rx="3.5"
                                                 stroke="#191700"
                                                 strokeWidth={2}
-                                                
+
                                             />
                                             <path
                                                 d="M9 15L15 9M15 9H9M15 9V15"
@@ -1170,21 +1217,21 @@ const Home = () => {
                                                 strokeWidth={2}
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
-                                                
+
                                             />
                                         </svg>
                                     </svg-icon>{" "}
                                     Contract{" "}
                                 </a>
                                 <a
-                                    
+
                                     title="giveaway"
                                     routerlinkactive="active"
                                     className="item contract my-2"
                                     href="/giveaway"
                                 >
                                     <svg-icon
-                                        
+
                                         src="./assets/images/svg-icons/from.svg"
                                         className="icon ms-2"
                                         ngh={0}
@@ -1195,7 +1242,7 @@ const Home = () => {
                                             viewBox="0 0 24 24"
                                             fill="none"
                                             xmlns="http://www.w3.org/2000/svg"
-                                            
+
                                             aria-hidden="true"
                                             style={{ width: "24px", height: "24px" }}
                                         >
@@ -1207,7 +1254,7 @@ const Home = () => {
                                                 rx="3.5"
                                                 stroke="#191700"
                                                 strokeWidth={2}
-                                                
+
                                             />
                                             <path
                                                 d="M9 15L15 9M15 9H9M15 9V15"
@@ -1215,7 +1262,7 @@ const Home = () => {
                                                 strokeWidth={2}
                                                 strokeLinecap="round"
                                                 strokeLinejoin="round"
-                                                
+
                                             />
                                         </svg>
                                     </svg-icon>{" "}
@@ -1633,8 +1680,8 @@ const Home = () => {
                                                     <img
                                                         _ngcontent-ng-c2966608895
                                                         src="/assets/images/png/youtube-icon.png"
-                                                        alt="youtube_poster"    
-                                                        className="youtube-icon"             
+                                                        alt="youtube_poster"
+                                                        className="youtube-icon"
                                                     />
                                                 </div>
                                             </div>
@@ -1768,7 +1815,9 @@ const Home = () => {
                                         the foundation of Pepeto’s vision of wisdom, safety, and unity
                                         for the crypto community.{" "}
                                     </p>
-
+                                    <div _ngcontent-ng-c2871691664 className="col-12">
+                                        <ValueCarousel />
+                                    </div>
                                 </div>
                                 <div
                                     _ngcontent-ng-c2871691664
@@ -2293,31 +2342,13 @@ const Home = () => {
                                 </h2>
                                 <div
                                     _ngcontent-ng-c1117491813
-                                    className="col-12 col-lg-6 items align-self-end mt-md-5"
+                                    className="col-12 col-lg-6 items align-self-center mt-md-5"
                                 >
-
-                                    <div _ngcontent-ng-c1117491813 className="nav-items">
-                                        <button _ngcontent-ng-c1117491813>
-                                            <img
-                                                _ngcontent-ng-c1117491813
-                                                src="/assets/images/svg-icons/left-arrow.svg"
-                                                alt="arrow"
-                                                loading="lazy"
-                                            />
-                                        </button>
-                                        <button _ngcontent-ng-c1117491813>
-                                            <img
-                                                _ngcontent-ng-c1117491813
-                                                src="/assets/images/svg-icons/right-arrow.svg"
-                                                alt="arrow"
-                                                loading="lazy"
-                                            />
-                                        </button>
-                                    </div>
+                                    <RoadmapCarousel />
                                 </div>
                                 <div
                                     _ngcontent-ng-c1117491813
-                                    className="col-12 col-lg-6 gif-wrapper align-self-end"
+                                    className="col-12 col-lg-6 gif-wrapper align-self-center"
                                 >
                                     <div _ngcontent-ng-c1117491813 className="img-item">
                                         <img
@@ -2372,414 +2403,7 @@ const Home = () => {
                                             </span>
                                         </h2>
                                         <div _ngcontent-ng-c1475096245 className="faq-wrapper pt-4">
-                                            <accordion
-                                                _ngcontent-ng-c1475096245
-                                                role="tablist"
-                                                className="panel-group"
-                                                style={{ display: "block" }}
-                                                aria-multiselectable="true"
-                                                ngh={0}
-                                            >
-                                                <accordion-group
-                                                    _ngcontent-ng-c1475096245
-                                                    className="panel"
-                                                    style={{ display: "block" }}
-                                                    _nghost-ng-c2529321899
-                                                    ngh={10}
-                                                >
-                                                    <div
-                                                        _ngcontent-ng-c2529321899
-                                                        className="panel card panel-default"
-                                                    >
-                                                        <div
-                                                            _ngcontent-ng-c2529321899
-                                                            role="tab"
-                                                            className="panel-heading card-header panel-enabled"
-                                                        >
-                                                            <div
-                                                                _ngcontent-ng-c2529321899
-                                                                className="panel-title"
-                                                            >
-                                                                <div
-                                                                    _ngcontent-ng-c2529321899
-                                                                    role="button"
-                                                                    className="accordion-toggle"
-                                                                    aria-expanded="false"
-                                                                >
-
-                                                                    <div
-                                                                        _ngcontent-ng-c1475096245
-                                                                        accordion-heading
-                                                                        className="position-relative w-100 fw-medium d-flex justify-content-between"
-                                                                    >
-                                                                        <span
-                                                                            _ngcontent-ng-c1475096245
-                                                                            className="text-black font-14 font-sm-18"
-                                                                        >
-                                                                            {" "}
-                                                                            Who is the God of frog?{" "}
-                                                                        </span>
-                                                                        <img
-                                                                            _ngcontent-ng-c1475096245
-                                                                            src="/assets/images/svg-icons/arrow-up.svg"
-                                                                            alt="arrow"
-                                                                            height={19}
-                                                                            loading="lazy"
-                                                                            className="icon pt-2"
-                                                                        />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div
-                                                            _ngcontent-ng-c2529321899
-                                                            role="tabpanel"
-                                                            className="panel-collapse collapse"
-                                                            style={{ display: "none" }}
-                                                            aria-hidden="true"
-                                                        >
-                                                            <div
-                                                                _ngcontent-ng-c2529321899
-                                                                className="panel-body card-block card-body"
-                                                            >
-                                                                <div
-                                                                    _ngcontent-ng-c1475096245
-                                                                    accordion-panel
-                                                                    className="mt-0"
-                                                                >
-                                                                    <span
-                                                                        _ngcontent-ng-c1475096245
-                                                                        className="para fw-normal"
-                                                                    >
-                                                                        {" "}
-                                                                        Pepeto is the God of Frogs, embodying wisdom
-                                                                        and power. His value comes from mastering
-                                                                        "Technology" and "Optimization," the key
-                                                                        components Pepe missed. While Pepe stole four
-                                                                        documents, he overlooked these crucial pieces,
-                                                                        making him incomplete. Pepeto's bridge
-                                                                        technology connects blockchains, ensuring
-                                                                        secure and transparent transfers. He
-                                                                        symbolizes innovation, fairness, and the
-                                                                        future of decentralized systems, bringing what
-                                                                        Pepe couldn’t: the complete solution.
-                                                                    </span>
-                                                                    <br _ngcontent-ng-c1475096245 />
-
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </accordion-group>
-                                                <accordion-group
-                                                    _ngcontent-ng-c1475096245
-                                                    className="panel"
-                                                    style={{ display: "block" }}
-                                                    _nghost-ng-c2529321899
-                                                    ngh={10}
-                                                >
-                                                    <div
-                                                        _ngcontent-ng-c2529321899
-                                                        className="panel card panel-default"
-                                                    >
-                                                        <div
-                                                            _ngcontent-ng-c2529321899
-                                                            role="tab"
-                                                            className="panel-heading card-header panel-enabled"
-                                                        >
-                                                            <div
-                                                                _ngcontent-ng-c2529321899
-                                                                className="panel-title"
-                                                            >
-                                                                <div
-                                                                    _ngcontent-ng-c2529321899
-                                                                    role="button"
-                                                                    className="accordion-toggle"
-                                                                    aria-expanded="false"
-                                                                >
-
-                                                                    <div
-                                                                        _ngcontent-ng-c1475096245
-                                                                        accordion-heading
-                                                                        className="position-relative w-100 fw-medium d-flex justify-content-between"
-                                                                    >
-                                                                        <span
-                                                                            _ngcontent-ng-c1475096245
-                                                                            className="text-black font-14 font-sm-18"
-                                                                        >
-                                                                            {" "}
-                                                                            When can I claim my Tokens?{" "}
-                                                                        </span>
-                                                                        <img
-                                                                            _ngcontent-ng-c1475096245
-                                                                            src="/assets/images/svg-icons/arrow-up.svg"
-                                                                            alt="arrow"
-                                                                            height={19}
-                                                                            loading="lazy"
-                                                                            className="icon pt-2"
-                                                                        />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div
-                                                            _ngcontent-ng-c2529321899
-                                                            role="tabpanel"
-                                                            className="panel-collapse collapse"
-                                                            style={{ display: "none" }}
-                                                            aria-hidden="true"
-                                                        >
-                                                            <div
-                                                                _ngcontent-ng-c2529321899
-                                                                className="panel-body card-block card-body"
-                                                            >
-                                                                <div
-                                                                    _ngcontent-ng-c1475096245
-                                                                    accordion-panel
-                                                                    className="mt-0"
-                                                                >
-                                                                    <span
-                                                                        _ngcontent-ng-c1475096245
-                                                                        className="para fw-normal"
-                                                                    >
-                                                                        {" "}
-                                                                        The claiming process uses secure Web3Toolkit
-                                                                        technology, allowing you to claim tokens after
-                                                                        the presale ends. Simply reconnect your
-                                                                        wallet, such as MetaMask, and click "claim."
-                                                                        Additionally, Web3Payments enables staking of
-                                                                        your tokens once they’ve been claimed.
-                                                                    </span>
-                                                                    <br _ngcontent-ng-c1475096245 />
-
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </accordion-group>
-                                                <accordion-group
-                                                    _ngcontent-ng-c1475096245
-                                                    className="panel"
-                                                    style={{ display: "block" }}
-                                                    _nghost-ng-c2529321899
-                                                    ngh={10}
-                                                >
-                                                    <div
-                                                        _ngcontent-ng-c2529321899
-                                                        className="panel card panel-default"
-                                                    >
-                                                        <div
-                                                            _ngcontent-ng-c2529321899
-                                                            role="tab"
-                                                            className="panel-heading card-header panel-enabled"
-                                                        >
-                                                            <div
-                                                                _ngcontent-ng-c2529321899
-                                                                className="panel-title"
-                                                            >
-                                                                <div
-                                                                    _ngcontent-ng-c2529321899
-                                                                    role="button"
-                                                                    className="accordion-toggle"
-                                                                    aria-expanded="false"
-                                                                >
-
-                                                                    <div
-                                                                        _ngcontent-ng-c1475096245
-                                                                        accordion-heading
-                                                                        className="position-relative w-100 fw-medium d-flex justify-content-between"
-                                                                    >
-                                                                        <span
-                                                                            _ngcontent-ng-c1475096245
-                                                                            className="text-black font-14 font-sm-18"
-                                                                        >
-                                                                            {" "}
-                                                                            What is Pepetoswap? Why is it better?{" "}
-                                                                        </span>
-                                                                        <img
-                                                                            _ngcontent-ng-c1475096245
-                                                                            src="/assets/images/svg-icons/arrow-up.svg"
-                                                                            alt="arrow"
-                                                                            height={19}
-                                                                            loading="lazy"
-                                                                            className="icon pt-2"
-                                                                        />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div
-                                                            _ngcontent-ng-c2529321899
-                                                            role="tabpanel"
-                                                            className="panel-collapse collapse"
-                                                            style={{ display: "none" }}
-                                                            aria-hidden="true"
-                                                        >
-                                                            <div
-                                                                _ngcontent-ng-c2529321899
-                                                                className="panel-body card-block card-body"
-                                                            >
-                                                                <div
-                                                                    _ngcontent-ng-c1475096245
-                                                                    accordion-panel
-                                                                    className="mt-0"
-                                                                >
-                                                                    <span
-                                                                        _ngcontent-ng-c1475096245
-                                                                        className="para fw-normal"
-                                                                    >
-                                                                        {" "}
-                                                                        Pepeto Exchange is designed with several
-                                                                        standout features that make it superior:
-                                                                    </span>
-                                                                    <br _ngcontent-ng-c1475096245 />
-                                                                    <ol
-                                                                        _ngcontent-ng-c1475096245
-                                                                        className="text-left ms-3 mb-0"
-                                                                    >
-                                                                        <li
-                                                                            _ngcontent-ng-c1475096245
-                                                                            className="para px-0 pb-2 pt-0"
-                                                                        >
-                                                                            Zero Fees
-                                                                        </li>
-                                                                        <li
-                                                                            _ngcontent-ng-c1475096245
-                                                                            className="para px-0 pb-2 pt-0"
-                                                                        >
-                                                                            Cross-Chain Bridge: Seamless
-                                                                            interoperability between multiple
-                                                                            blockchains ensures easy and flexible token
-                                                                            transfers.
-                                                                        </li>
-                                                                        <li
-                                                                            _ngcontent-ng-c1475096245
-                                                                            className="para px-0 pb-2 pt-0"
-                                                                        >
-                                                                            Honest and Corruption-Free: As the God of
-                                                                            Frogs, Pepeto guarantees a fair and
-                                                                            transparent platform. Only deserving tokens
-                                                                            are listed, ensuring no favoritism or
-                                                                            corruption in the process.
-                                                                        </li>
-                                                                        <li
-                                                                            _ngcontent-ng-c1475096245
-                                                                            className="para px-0 pb-2 pt-0"
-                                                                        >
-                                                                            Security and Trust
-                                                                        </li>
-                                                                        <li
-                                                                            _ngcontent-ng-c1475096245
-                                                                            className="para px-0 pb-2 pt-0"
-                                                                        >
-                                                                            Supportive Environment: Pepeto offers
-                                                                            assistance for new projects, fostering
-                                                                            growth and success for all worthy
-                                                                            participants.
-                                                                        </li>
-                                                                    </ol>
-
-                                                                    <span
-                                                                        _ngcontent-ng-c1475096245
-                                                                        className="para fw-normal"
-                                                                    >
-                                                                        This combination of fairness, innovation, and
-                                                                        security makes Pepeto Exchange stand out.
-                                                                    </span>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </accordion-group>
-                                                <accordion-group
-                                                    _ngcontent-ng-c1475096245
-                                                    className="panel"
-                                                    style={{ display: "block" }}
-                                                    _nghost-ng-c2529321899
-                                                    ngh={10}
-                                                >
-                                                    <div
-                                                        _ngcontent-ng-c2529321899
-                                                        className="panel card panel-default"
-                                                    >
-                                                        <div
-                                                            _ngcontent-ng-c2529321899
-                                                            role="tab"
-                                                            className="panel-heading card-header panel-enabled"
-                                                        >
-                                                            <div
-                                                                _ngcontent-ng-c2529321899
-                                                                className="panel-title"
-                                                            >
-                                                                <div
-                                                                    _ngcontent-ng-c2529321899
-                                                                    role="button"
-                                                                    className="accordion-toggle"
-                                                                    aria-expanded="false"
-                                                                >
-
-                                                                    <div
-                                                                        _ngcontent-ng-c1475096245
-                                                                        accordion-heading
-                                                                        className="position-relative w-100 fw-medium d-flex justify-content-between"
-                                                                    >
-                                                                        <span
-                                                                            _ngcontent-ng-c1475096245
-                                                                            className="text-black font-14 font-sm-18"
-                                                                        >
-                                                                            {" "}
-                                                                            When will Pepeto be released?{" "}
-                                                                        </span>
-                                                                        <img
-                                                                            _ngcontent-ng-c1475096245
-                                                                            src="/assets/images/svg-icons/arrow-up.svg"
-                                                                            alt="arrow"
-                                                                            height={19}
-                                                                            loading="lazy"
-                                                                            className="icon pt-2"
-                                                                        />
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div
-                                                            _ngcontent-ng-c2529321899
-                                                            role="tabpanel"
-                                                            className="panel-collapse collapse"
-                                                            style={{ display: "none" }}
-                                                            aria-hidden="true"
-                                                        >
-                                                            <div
-                                                                _ngcontent-ng-c2529321899
-                                                                className="panel-body card-block card-body"
-                                                            >
-                                                                <div
-                                                                    _ngcontent-ng-c1475096245
-                                                                    accordion-panel
-                                                                    className="mt-0"
-                                                                >
-                                                                    <span
-                                                                        _ngcontent-ng-c1475096245
-                                                                        className="para fw-normal"
-                                                                    >
-                                                                        {" "}
-                                                                        Pepeto exchange and ecosystem will be released
-                                                                        once the presale has ended! AKA the day of
-                                                                        judgment.
-                                                                    </span>
-                                                                    <br _ngcontent-ng-c1475096245 />
-
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </accordion-group>
-
-                                            </accordion>
+                                            <FAQAccordion />
                                         </div>
                                     </div>
                                 </div>

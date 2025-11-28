@@ -1,0 +1,223 @@
+.value-carousel-wrapper {
+    width: 100%;
+    padding: 6rem 0 3rem 0; /* Increased top padding to accommodate icon overflow */
+    position: relative;
+}
+
+.carousel-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 2rem;
+    overflow: visible; /* Changed from hidden to visible to show full icons */
+    flex: 1;
+    justify-content: center;
+    padding-top: 100px; /* Add padding to accommodate the icon overflow */
+    padding-bottom: 20px;
+}
+
+.carousel-card {
+    flex: 0 0 calc(33.333% - 1.33rem);
+    min-width: 300px;
+    opacity: 1;
+    transform: scale(0.9);
+    transition: all 0.4s ease-in-out;
+}
+
+.carousel-card.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.card-inner {
+    /* Background is now handled inline in JSX */
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.carousel-card:hover .card-inner {
+    transform: translateY(-5px);
+}
+
+.card-icon-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.card-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.card-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffd700;
+    font-style: italic;
+}
+
+.card-description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.card-note {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-style: italic;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+.carousel-nav-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    z-index: 1;
+}
+
+.carousel-nav-btn:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.carousel-nav-btn:active {
+    transform: scale(0.95);
+}
+
+.carousel-nav-btn img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.prev-btn {
+    margin-right: 0rem;
+}
+
+.next-btn {
+    margin-left: 0rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .carousel-card {
+        flex: 0 0 calc(50% - 1rem);
+    }
+    
+    .carousel-card:last-child {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .value-carousel-wrapper {
+        padding: 5rem 0 2rem 0; /* Adjusted for mobile */
+    }
+
+    .carousel-container {
+        gap: 1rem;
+        padding: 0 0.5rem;
+    }
+
+    .carousel-track {
+        gap: 1rem;
+        padding-top: 80px; /* Adjusted padding for mobile icons */
+    }
+
+    .carousel-card {
+        flex: 0 0 100%;
+        min-width: 250px;
+    }
+
+    .carousel-card:not(.active) {
+        display: none;
+    }
+
+    .card-inner {
+        padding: 2rem 1.5rem;
+        min-height: 350px;
+    }
+
+    .card-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .card-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .card-description {
+        font-size: 0.875rem;
+    }
+
+    .carousel-nav-btn img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .prev-btn {
+        margin-right: 0.5rem;
+    }
+
+    .next-btn {
+        margin-left: 0.5rem;
+    }
+}
+
+/* Animation for card transitions */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.carousel-card.active {
+    animation: slideIn 0.4s ease-out;
+}
